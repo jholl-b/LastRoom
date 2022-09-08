@@ -1,13 +1,13 @@
-﻿using LastRoom.Api.Models;
+﻿using FluentResults;
+using LastRoom.Api.Models;
 
 namespace LastRoom.Api.Services;
 
 public interface IBookingService
 {
     public Booking GetAllBookings(Guid ticket);
-    public Task<IList<Booking>> GetAllBookingsAsync();
-    public Task<Booking> CreateNewBookingAsync(
-        string clientIdentification,
+    public Task<List<Booking>> GetAllBookingsAsync();
+    public Task<Result<Booking>> CreateNewBookingAsync(string clientIdentification,
         string clientFullName,
         DateOnly checkInDate,
         DateOnly checkOutDate);

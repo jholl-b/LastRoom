@@ -1,4 +1,6 @@
-﻿using LastRoom.Api.Models;
+﻿using FluentResults;
+using LastRoom.Api.Errors.Booking;
+using LastRoom.Api.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace LastRoom.Api.Services;
@@ -17,41 +19,39 @@ public class BookingService : IBookingService
         throw new NotImplementedException();
     }
     
-    public async Task<IList<Booking>> GetAllBookingsAsync()
+    public async Task<List<Booking>> GetAllBookingsAsync()
     {
-        return await _dbContext
+        var bookings = await _dbContext
             .Bookings
             .Include(x => x.Client)
+            .AsNoTracking()
             .ToListAsync();
+
+        return bookings;
     }
 
-    public async Task<Booking> CreateNewBookingAsync(
+    public async Task<Result<Booking>> CreateNewBookingAsync(
         string clientIdentification, 
         string clientFullName, 
         DateOnly checkInDate, 
         DateOnly checkOutDate)
     {
-        //TODO
-        //room must be available
-        var reservated = _dbContext
+        var reserved = _dbContext
             .Bookings
-            .Any(x => x.CheckInDate < checkOutDate 
-                      && checkInDate < x.CheckOutDate );
+            .Any(x => x.CheckInDate <= checkOutDate && checkInDate <= x.CheckOutDate );
         
-        //TODO change exception to Result value
-        if (reservated) throw new Exception("Room booked during this period");
-
-        //the stay can’t be longer than 3 days
+        if (reserved)
+            return Result.Fail(new RoomAlreadyBookedError());
+        
         var period = checkOutDate.DayNumber - checkInDate.DayNumber;
-        if ( period > 3 ) throw new Exception("You can't book a room for more that 3 days");
+        if (period > 3)
+            return Result.Fail(new StayPeriodTooLongError());
         
-        //can’t be reserved more than 30 days in advance
         if (checkInDate.DayNumber - DateOnly.FromDateTime(DateTime.Now).DayNumber > 30)
-            throw new Exception("You can't book a room more that 30 days in advance");
-        
-        //can reserve starting from the next day
+            return Result.Fail(new BookingDateTooFarError());
+
         if (checkInDate.DayNumber - DateOnly.FromDateTime(DateTime.Now).DayNumber < 1)
-            throw new Exception("You can't book a room for a date earlier than tomorrow");
+            return Result.Fail(new StartDateNotAllowedError());
         
         //Can book
         var booking = new Booking
