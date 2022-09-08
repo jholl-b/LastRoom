@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7544D4F1-C5F2-4923-8007-6B40943EE2F3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{EDB31944-DFCB-4A72-A14D-F991F445484C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LastRoom.Api", "LastRoom.Api\LastRoom.Api.csproj", "{8B8EEA31-66D5-473F-99CB-5705FEE53165}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8B8EEA31-66D5-473F-99CB-5705FEE53165} = {7544D4F1-C5F2-4923-8007-6B40943EE2F3}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8B8EEA31-66D5-473F-99CB-5705FEE53165}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B8EEA31-66D5-473F-99CB-5705FEE53165}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B8EEA31-66D5-473F-99CB-5705FEE53165}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B8EEA31-66D5-473F-99CB-5705FEE53165}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
