@@ -8,15 +8,22 @@ namespace LastRoom.Api.Services;
 public class BookingService : IBookingService
 {
     private readonly LastRoomDbContext _dbContext;
+    private readonly IDateTimeProvider _date;
 
-    public BookingService(LastRoomDbContext dbContext)
+    public BookingService(LastRoomDbContext dbContext, IDateTimeProvider date)
     {
         _dbContext = dbContext;
+        _date = date;
     }
 
-    public Booking GetAllBookings(Guid ticket)
+    public async Task<Result<Booking>> GetBookingAsync(Guid ticket)
     {
-        throw new NotImplementedException();
+        var booking = await GetABookingByTicketAsync(ticket);
+
+        if (booking is null)
+            return Result.Fail(new BookingNotFoundError());
+
+        return booking;
     }
     
     public async Task<List<Booking>> GetAllBookingsAsync()
@@ -42,18 +49,11 @@ public class BookingService : IBookingService
         
         if (reserved)
             return Result.Fail(new RoomAlreadyBookedError());
-        
-        var period = checkOutDate.DayNumber - checkInDate.DayNumber;
-        if (period > 3)
-            return Result.Fail(new StayPeriodTooLongError());
-        
-        if (checkInDate.DayNumber - DateOnly.FromDateTime(DateTime.Now).DayNumber > 30)
-            return Result.Fail(new BookingDateTooFarError());
 
-        if (checkInDate.DayNumber - DateOnly.FromDateTime(DateTime.Now).DayNumber < 1)
-            return Result.Fail(new StartDateNotAllowedError());
-        
-        //Can book
+        var validation = ValidateBooking(checkInDate, checkOutDate);
+        if (validation.IsFailed)
+            return validation;
+
         var booking = new Booking
         {
             Ticket = Guid.NewGuid(),
@@ -72,13 +72,69 @@ public class BookingService : IBookingService
         return booking;
     }
 
-    public Booking UpdateBooking(Guid ticket, Booking booking)
+    public async Task<Result> UpdateBookingAsync(Guid ticket, Booking booking)
     {
-        throw new NotImplementedException();
+        var dbBooking = await GetABookingByTicketAsync(ticket);
+
+        if (dbBooking is null)
+            return Result.Fail(new BookingNotFoundError());
+        
+        var reserved = _dbContext
+            .Bookings
+            .Any(x => x.CheckInDate <= booking.CheckInDate 
+                      && booking.CheckOutDate <= x.CheckOutDate
+                      && x.Ticket != booking.Ticket);
+        
+        if (reserved)
+            return Result.Fail(new RoomAlreadyBookedError());
+        
+        var validation = ValidateBooking(booking.CheckInDate, booking.CheckOutDate);
+        if (validation.IsFailed)
+            return validation;
+
+        dbBooking.Client.FullName = booking.Client.FullName;
+        dbBooking.Client.Identification = booking.Client.Identification;
+        dbBooking.CheckInDate = booking.CheckInDate;
+        dbBooking.CheckOutDate = booking.CheckOutDate;
+
+        await _dbContext.SaveChangesAsync();
+
+        return Result.Ok();
     }
 
-    public void CancelBooking(Guid ticket)
+    public async Task<Result> CancelBooking(Guid ticket)
     {
-        throw new NotImplementedException();
+        var dbBooking = await GetABookingByTicketAsync(ticket);
+
+        if (dbBooking is null)
+            return Result.Fail(new BookingNotFoundError());
+
+        _dbContext.Remove(dbBooking);
+        await _dbContext.SaveChangesAsync();
+
+        return Result.Ok();
+    }
+
+    private async Task<Booking?> GetABookingByTicketAsync(Guid ticket)
+    {
+        return await _dbContext
+            .Bookings
+            .Include(x => x.Client)
+            .SingleOrDefaultAsync(x => x.Ticket == ticket);
+    }
+
+    private Result ValidateBooking(DateOnly checkInDate, DateOnly checkOutDate)
+    {
+        var period = checkOutDate.DayNumber - checkInDate.DayNumber;
+        if (period >= 3)
+            return Result.Fail(new StayPeriodTooLongError());
+        
+        if (checkInDate.DayNumber - _date.DateOnlyUtcNow.DayNumber > 30)
+            return Result.Fail(new BookingDateTooFarError());
+
+        if (checkInDate.DayNumber - _date.DateOnlyUtcNow.DayNumber < 1)
+            return Result.Fail(new StartDateNotAllowedError());
+
+        return Result.Ok();
     }
 }

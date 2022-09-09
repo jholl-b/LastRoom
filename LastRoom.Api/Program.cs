@@ -7,6 +7,7 @@ var path = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationD
 var fullPath = Path.Join(path, builder.Configuration.GetConnectionString("LastRoom"));
 var connectionString = $"Data Source={fullPath}";
 
+builder.Services.AddScoped<IDateTimeProvider, DateTimeProvider>();
 builder.Services.AddScoped<IBookingService, BookingService>();
 
 builder.Services.AddDbContext<LastRoomDbContext>(opt => 
