@@ -5,7 +5,7 @@
 + [x] Create CRUD for booking
 + [ ] GET /booking only return dates (maybe present 30 days and if it is vacant)
 + [ ] Create UserController to make a GET booking for client ID
-+ [ ] Create tests for booking
++ [ ] Create tests for booking and controller
 + [ ] Finish the README
 
 ## 1. Description

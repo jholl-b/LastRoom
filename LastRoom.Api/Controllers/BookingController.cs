@@ -7,11 +7,11 @@ using Microsoft.AspNetCore.Mvc.ModelBinding;
 namespace LastRoom.Api.Controllers;
 
 [Route("[controller]")]
-public class BookingController : ApiController
+public class BookingsController : ApiController
 {
     private readonly IBookingService _bookingService;
 
-    public BookingController(IBookingService bookingService)
+    public BookingsController(IBookingService bookingService)
     {
         _bookingService = bookingService;
     }
@@ -24,11 +24,13 @@ public class BookingController : ApiController
         if (result.IsFailed)
             return Problem(result.Errors);
         
-        var response = new BookingResponse(
-            result.Value.Ticket,
-            result.Value.Client.FullName,
-            result.Value.CheckInDate.ToDateTime(TimeOnly.MinValue),
-            result.Value.CheckOutDate.ToDateTime(TimeOnly.MaxValue));
+        var response = new BookingResponse
+        {
+            Ticket = result.Value.Ticket,
+            ClientFullName = result.Value.Client.FullName,
+            CheckInDate = result.Value.CheckInDate,
+            CheckOutDate = result.Value.CheckOutDate
+        };
         
         return Ok(response);
     }
@@ -44,11 +46,12 @@ public class BookingController : ApiController
         foreach (var booking in bookings)
         {
             listResponse.Add(new BookingResponse
-            (
-                booking.Ticket,
-                booking.Client.FullName,
-                booking.CheckInDate.ToDateTime(TimeOnly.MinValue),
-                booking.CheckOutDate.ToDateTime(TimeOnly.MaxValue)));
+            {
+                Ticket = booking.Ticket,
+                ClientFullName = booking.Client.FullName,
+                CheckInDate = booking.CheckInDate,
+                CheckOutDate = booking.CheckOutDate
+            });
         }
         
         return Ok(listResponse);
@@ -60,17 +63,19 @@ public class BookingController : ApiController
         var result = await _bookingService.CreateNewBookingAsync(
             request.ClientIdentification,
             request.ClientFullName,
-            DateOnly.FromDateTime(request.CheckInDate),
-            DateOnly.FromDateTime(request.CheckOutDate));
+            request.CheckInDate,
+            request.CheckOutDate);
 
         if (result.IsFailed)
             return Problem(result.Errors);
 
-        var response = new BookingResponse(
-            result.Value.Ticket,
-            result.Value.Client.FullName,
-            result.Value.CheckInDate.ToDateTime(TimeOnly.MinValue),
-            result.Value.CheckOutDate.ToDateTime(TimeOnly.MaxValue));
+        var response = new BookingResponse
+        {
+            Ticket = result.Value.Ticket,
+            ClientFullName = result.Value.Client.FullName,
+            CheckInDate = result.Value.CheckInDate,
+            CheckOutDate = result.Value.CheckOutDate
+        };
 
         return Ok(response);
     }
@@ -81,8 +86,8 @@ public class BookingController : ApiController
         var booking = new Booking
         {
             Ticket = ticket,
-            CheckInDate = DateOnly.FromDateTime(request.CheckInDate),
-            CheckOutDate = DateOnly.FromDateTime(request.CheckOutDate),
+            CheckInDate = request.CheckInDate,
+            CheckOutDate = request.CheckOutDate,
             Client = new Client
             {
                 Identification = request.ClientIdentification,
@@ -95,11 +100,13 @@ public class BookingController : ApiController
         if (result.IsFailed)
             return Problem(result.Errors);
 
-        var response = new BookingResponse(
-            booking.Ticket,
-            booking.Client.FullName,
-            booking.CheckInDate.ToDateTime(TimeOnly.MinValue),
-            booking.CheckOutDate.ToDateTime(TimeOnly.MaxValue));
+        var response = (new BookingResponse
+            {
+                Ticket = booking.Ticket,
+                ClientFullName = booking.Client.FullName,
+                CheckInDate = booking.CheckInDate,
+                CheckOutDate = booking.CheckOutDate
+            });
 
         return Ok(response);
     }

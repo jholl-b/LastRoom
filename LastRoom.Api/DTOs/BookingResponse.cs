@@ -1,7 +1,14 @@
-﻿namespace LastRoom.Api.DTOs;
+﻿using System.Text.Json.Serialization;
+using LastRoom.Api.Converters;
 
-public record BookingResponse(
-    Guid Ticket,
-    string ClientFullName,
-    DateTime CheckInDate,
-    DateTime CheckOutDate);
+namespace LastRoom.Api.DTOs;
+
+public class BookingResponse
+{
+    public Guid Ticket { get; init; }
+    public string ClientFullName { get; init; } = default!;
+    [JsonConverter(typeof(DateOnlyJsonConverter))]
+    public DateOnly CheckInDate { get; init; }
+    [JsonConverter(typeof(DateOnlyJsonConverter))]
+    public DateOnly CheckOutDate { get; init; }
+}
