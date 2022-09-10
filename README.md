@@ -3,9 +3,10 @@
 ## TODO
 
 + [x] Create CRUD for booking
-+ [ ] GET /booking only return dates (maybe present 30 days and if it is vacant)
++ [x] GET /booking only return dates (maybe present 30 days and if it is vacant)
 + [ ] Create UserController to make a GET booking for client ID
-+ [ ] Create tests for booking and controller
++ [x] Create tests for booking
++ [ ] Create tests for controller
 + [ ] Finish the README
 
 ## 1. Description
@@ -16,28 +17,80 @@ Unfortunately we only have one room available, please check the days already boo
 
 ## 2. API
 
-### 2.1 booking [/booking]
+### 2.1. GET (/bookings)
 
-List all bookings for the room.
+Listing the next 30 days and if the room is vacant.
 
-+ Response 200 (application/json)
++ Response
   
 ```json
 [
 	{
-		"ticket": "86a22ae6-a24a-41fa-96a4-19561132cd5f",
-		"clientFullName": "user 01",
-		"checkInDate": "2022-09-09T00:00:00",
-		"checkOutDate": "2022-09-12T23:59:59.9999999"
+		"vacant": false,
+		"date": "2022-09-11"
 	},
-	{
-		"ticket": "4aa2b0f4-c915-46c3-972b-450ad3219c85",
-		"clientFullName": "user 02",
-		"checkInDate": "2022-09-13T00:00:00",
-		"checkOutDate": "2022-09-16T23:59:59.9999999"
-	}
+	...
 ]
 ```
+
+### 2.2. GET (bookings/{ticket})
+
++ Response
+
+```json
+{
+	"ticket": "65475ce5-3293-4f96-8c1a-dbb6350420c1",
+	"clientFullName": "User 01",
+	"checkInDate": "2022-09-11",
+	"checkOutDate": "2022-09-13"
+}
+```
+
+### 2.3. POST (bookings)
+
++ Request
+```json
+{
+  "clientIdentification": "id",
+  "clientFullName": "User 01",
+  "checkInDate": "2022-09-11",
+  "checkOutDate": "2022-09-13"
+}
+```
++ Response
+```json
+{
+	"ticket": "65475ce5-3293-4f96-8c1a-dbb6350420c1",
+	"clientFullName": "User 01",
+	"checkInDate": "2022-09-11",
+	"checkOutDate": "2022-09-13"
+}
+```
+
+### 2.4. PUT (bookings/{ticket})
+
++ Request
+```json
+{
+  "clientIdentification": "id",
+  "clientFullName": "User 01",
+  "checkInDate": "2022-09-11",
+  "checkOutDate": "2022-09-13"
+}
+```
++ Response
+```json
+{
+	"ticket": "65475ce5-3293-4f96-8c1a-dbb6350420c1",
+	"clientFullName": "User 01",
+	"checkInDate": "2022-09-11",
+	"checkOutDate": "2022-09-13"
+}
+```
+
+### 2.5. DELETE (bookings/{ticket})
+
++ Response 204
 
 ## 998. Extensions for tests
 

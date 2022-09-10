@@ -36,21 +36,17 @@ public class BookingsController : ApiController
     }
     
     [HttpGet]
-    public async Task<ActionResult<BookingResponse>> Get()
+    public async Task<ActionResult<BookingDaysResponse>> Get()
     {
-        //TODO return only dates
-        
-        var bookings = await _bookingService.GetAllBookingsAsync();
-        
-        var listResponse = new List<BookingResponse>();
+        var bookings = await _bookingService.GetAllPossibleBookingDatesAsync();
+        var listResponse = new List<BookingDaysResponse>();
+
         foreach (var booking in bookings)
         {
-            listResponse.Add(new BookingResponse
+            listResponse.Add(new BookingDaysResponse
             {
-                Ticket = booking.Ticket,
-                ClientFullName = booking.Client.FullName,
-                CheckInDate = booking.CheckInDate,
-                CheckOutDate = booking.CheckOutDate
+                Date = booking.Key,
+                Vacant = booking.Value
             });
         }
         
@@ -114,7 +110,7 @@ public class BookingsController : ApiController
     [HttpDelete("{ticket:guid}")]
     public async Task<ActionResult> Delete(Guid ticket)
     {
-        var result = await _bookingService.CancelBooking(ticket);
+        var result = await _bookingService.CancelBookingAsync(ticket);
         
         if (result.IsFailed)
             return Problem(result.Errors);

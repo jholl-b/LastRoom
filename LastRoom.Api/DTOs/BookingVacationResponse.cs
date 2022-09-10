@@ -3,7 +3,7 @@ using LastRoom.Api.Converters;
 
 namespace LastRoom.Api.DTOs;
 
-public record BookingVacationResponse
+public record BookingDaysResponse
 {
     public bool Vacant { get; init; }
     [JsonConverter(typeof(DateOnlyJsonConverter))]

@@ -26,32 +26,34 @@ public class BookingService : IBookingService
         return booking;
     }
     
-    public async Task<List<Booking>> GetAllBookingsAsync()
+    public async Task<Dictionary<DateOnly, bool>> GetAllPossibleBookingDatesAsync()
     {
-        //TODO
-
-        //var dates = new KeyValuePair<bool, DateOnly>(true, new DateOnly(2022, 1, 1));
-
-        // var dates = new List<KeyValuePair<bool, DateOnly>>();
-        // var now = _date.DateOnlyUtcNow;
-        // for (int i = 0; i < 30; i++)
-        // {
-        //     dates.Add(new KeyValuePair<bool, DateOnly>(true, now));
-        //     now = now.AddDays(1);
-        // }
+        var dates = new Dictionary<DateOnly, bool>();
+        var now = _date.DateOnlyUtcNow.AddDays(1);
+        for (int i = 0; i < 30; i++)
+        {
+            dates.Add(now, true);
+            now = now.AddDays(1);
+        }
 
         var bookings = await _dbContext
             .Bookings
             .Include(x => x.Client)
             .Where(x => x.CheckOutDate > _date.DateOnlyUtcNow)
-            .AsNoTracking()
             .ToListAsync();
 
-        //Getting 30 days
-        //var days = Enumerable.OfType<>
+        foreach (var booking in bookings)
+        {
+            foreach(var date in dates.Keys)
+            {
+                if (date >= booking.CheckInDate && date <= booking.CheckOutDate)
+                {
+                    dates[date] = false;
+                }
+            }
+        }
 
-
-        return bookings;
+        return dates;
     }
 
     public async Task<Result<Booking>> CreateNewBookingAsync(
@@ -60,12 +62,9 @@ public class BookingService : IBookingService
         DateOnly checkInDate, 
         DateOnly checkOutDate)
     {
-        var reserved = _dbContext
-            .Bookings
-            .Any(x => x.CheckInDate <= checkOutDate && checkInDate <= x.CheckOutDate );
-        
-        if (reserved)
-            return Result.Fail(new RoomAlreadyBookedError());
+        var reserved = Reserved(checkInDate, checkOutDate);
+        if (reserved.IsFailed)
+            return reserved;
 
         var validation = ValidateBooking(checkInDate, checkOutDate);
         if (validation.IsFailed)
@@ -96,14 +95,9 @@ public class BookingService : IBookingService
         if (dbBooking is null)
             return Result.Fail(new BookingNotFoundError());
         
-        var reserved = _dbContext
-            .Bookings
-            .Any(x => x.CheckInDate <= booking.CheckInDate 
-                      && booking.CheckOutDate <= x.CheckOutDate
-                      && x.Ticket != booking.Ticket);
-        
-        if (reserved)
-            return Result.Fail(new RoomAlreadyBookedError());
+        var reserved = Reserved(booking);
+        if (reserved.IsFailed)
+            return reserved;
         
         var validation = ValidateBooking(booking.CheckInDate, booking.CheckOutDate);
         if (validation.IsFailed)
@@ -119,7 +113,7 @@ public class BookingService : IBookingService
         return Result.Ok();
     }
 
-    public async Task<Result> CancelBooking(Guid ticket)
+    public async Task<Result> CancelBookingAsync(Guid ticket)
     {
         var dbBooking = await GetABookingByTicketAsync(ticket);
 
@@ -143,7 +137,7 @@ public class BookingService : IBookingService
     private Result ValidateBooking(DateOnly checkInDate, DateOnly checkOutDate)
     {
         if (checkOutDate.DayNumber - checkInDate.DayNumber < 0)
-            return Result.Fail(new StayPeriodTooLongError()); //TODO trocar error por "data de saída não pode ser menor que data de entrada"
+            return Result.Fail(new CheckOutBeforeCheckInError());
 
         if (checkOutDate.DayNumber - checkInDate.DayNumber >= 3)
             return Result.Fail(new StayPeriodTooLongError());
@@ -153,6 +147,32 @@ public class BookingService : IBookingService
 
         if (checkInDate.DayNumber - _date.DateOnlyUtcNow.DayNumber < 1)
             return Result.Fail(new StartDateNotAllowedError());
+
+        return Result.Ok();
+    }
+
+    private Result Reserved(DateOnly checkInDate, DateOnly checkOutDate)
+    {
+        var reserved = _dbContext
+            .Bookings
+            .Any(x => x.CheckInDate <= checkOutDate && checkInDate <= x.CheckOutDate );
+
+        if (reserved)
+            return Result.Fail(new RoomAlreadyBookedError());
+
+        return Result.Ok();
+    }
+
+    private Result Reserved(Booking booking)
+    {
+        var reserved = _dbContext
+            .Bookings
+            .Any(x => x.CheckInDate <= booking.CheckInDate 
+                      && booking.CheckOutDate <= x.CheckOutDate
+                      && x.Ticket != booking.Ticket);
+        
+        if (reserved)
+            return Result.Fail(new RoomAlreadyBookedError());
 
         return Result.Ok();
     }
