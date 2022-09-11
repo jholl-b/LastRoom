@@ -1,7 +1,7 @@
 ﻿using FluentResults;
 using LastRoom.Api.Models;
 
-namespace LastRoom.Api.Services;
+namespace LastRoom.Api.Services.Interfaces;
 
 public interface IBookingService
 {

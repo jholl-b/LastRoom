@@ -1,6 +1,7 @@
 ﻿using FluentResults;
 using LastRoom.Api.Errors.Booking;
 using LastRoom.Api.Models;
+using LastRoom.Api.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 namespace LastRoom.Api.Services;

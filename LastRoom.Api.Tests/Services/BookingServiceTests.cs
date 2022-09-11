@@ -1,5 +1,6 @@
 using LastRoom.Api.Models;
 using LastRoom.Api.Services;
+using LastRoom.Api.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Moq;
 

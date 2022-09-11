@@ -1,6 +1,7 @@
 ﻿using LastRoom.Api.DTOs;
 using LastRoom.Api.Models;
 using LastRoom.Api.Services;
+using LastRoom.Api.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 
@@ -21,34 +22,19 @@ public class BookingsController : ApiController
     {
         var result = await _bookingService.GetBookingAsync(ticket);
         
-        if (result.IsFailed)
-            return Problem(result.Errors);
+        if (result.IsFailed) return Problem(result.Errors);
         
-        var response = new BookingResponse
-        {
-            Ticket = result.Value.Ticket,
-            ClientFullName = result.Value.Client.FullName,
-            CheckInDate = result.Value.CheckInDate,
-            CheckOutDate = result.Value.CheckOutDate
-        };
+        var response = MapBookingToBookingResponse(result.Value);
         
         return Ok(response);
     }
     
-    [HttpGet]
-    public async Task<ActionResult<BookingDaysResponse>> Get()
+    [HttpGet("days")]
+    public async Task<ActionResult<List<BookingDaysResponse>>> Get()
     {
         var bookings = await _bookingService.GetAllPossibleBookingDatesAsync();
-        var listResponse = new List<BookingDaysResponse>();
-
-        foreach (var booking in bookings)
-        {
-            listResponse.Add(new BookingDaysResponse
-            {
-                Date = booking.Key,
-                Vacant = booking.Value
-            });
-        }
+        
+        var listResponse = MapDictOfDateToListOfBookingDaysResponse(bookings);
         
         return Ok(listResponse);
     }
@@ -62,16 +48,9 @@ public class BookingsController : ApiController
             request.CheckInDate,
             request.CheckOutDate);
 
-        if (result.IsFailed)
-            return Problem(result.Errors);
+        if (result.IsFailed) return Problem(result.Errors);
 
-        var response = new BookingResponse
-        {
-            Ticket = result.Value.Ticket,
-            ClientFullName = result.Value.Client.FullName,
-            CheckInDate = result.Value.CheckInDate,
-            CheckOutDate = result.Value.CheckOutDate
-        };
+        var response = MapBookingToBookingResponse(result.Value);
 
         return Ok(response);
     }
@@ -79,7 +58,29 @@ public class BookingsController : ApiController
     [HttpPut("{ticket:guid}")]
     public async Task<ActionResult<BookingResponse>> Put(Guid ticket, BookingRequest request)
     {
-        var booking = new Booking
+        var booking = MapBookingRequestToBooking(ticket, request);
+
+        var result = await _bookingService.UpdateBookingAsync(ticket, booking);
+        
+        if (result.IsFailed) return Problem(result.Errors);
+
+        var response = MapBookingToBookingResponse(booking);
+
+        return Ok(response);
+    }
+
+    [HttpDelete("{ticket:guid}")]
+    public async Task<ActionResult> Delete(Guid ticket)
+    {
+        var result = await _bookingService.CancelBookingAsync(ticket);
+        
+        if (result.IsFailed) return Problem(result.Errors);
+
+        return NoContent();
+    }
+
+    private Booking MapBookingRequestToBooking(Guid ticket, BookingRequest request)
+        => new Booking
         {
             Ticket = ticket,
             CheckInDate = request.CheckInDate,
@@ -91,30 +92,21 @@ public class BookingsController : ApiController
             }
         };
 
-        var result = await _bookingService.UpdateBookingAsync(ticket, booking);
-        
-        if (result.IsFailed)
-            return Problem(result.Errors);
+    private BookingResponse MapBookingToBookingResponse(Booking booking)
+        => new BookingResponse
+        {
+            Ticket = booking.Ticket,
+            ClientFullName = booking.Client.FullName,
+            CheckInDate = booking.CheckInDate,
+            CheckOutDate = booking.CheckOutDate
+        };
 
-        var response = (new BookingResponse
+    private List<BookingDaysResponse> MapDictOfDateToListOfBookingDaysResponse(Dictionary<DateOnly, bool> bookings)
+        => bookings
+            .Select(x => new BookingDaysResponse
             {
-                Ticket = booking.Ticket,
-                ClientFullName = booking.Client.FullName,
-                CheckInDate = booking.CheckInDate,
-                CheckOutDate = booking.CheckOutDate
-            });
-
-        return Ok(response);
-    }
-
-    [HttpDelete("{ticket:guid}")]
-    public async Task<ActionResult> Delete(Guid ticket)
-    {
-        var result = await _bookingService.CancelBookingAsync(ticket);
-        
-        if (result.IsFailed)
-            return Problem(result.Errors);
-
-        return NoContent();
-    }
+                Date = x.Key,
+                Vacant = x.Value
+            })
+            .ToList();
 }

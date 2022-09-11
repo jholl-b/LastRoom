@@ -1,4 +1,4 @@
-﻿namespace LastRoom.Api.Services;
+﻿namespace LastRoom.Api.Services.Interfaces;
 
 public interface IDateTimeProvider
 {

@@ -1,25 +1,21 @@
 # LastRoom
 
-## TODO
-
-+ [x] Create CRUD for booking
-+ [x] GET /booking only return dates (maybe present 30 days and if it is vacant)
-+ [ ] Create UserController to make a GET booking for client ID
-+ [x] Create tests for booking
-+ [ ] Create tests for controller
-+ [ ] Finish the README
-
 ## 1. Description
 
 API for the last hotel in Cancun.
 
 Unfortunately we only have one room available, please check the days already booked in advance.
 
+### 1.1. Running the project
+
++ dotnet ef --project .\LastRoom.Api\ database update
++ dotnet run --project .\LastRoom.Api\
+
 ## 2. API
 
-### 2.1. GET (/bookings)
+### 2.1. GET (/bookings/days)
 
-Listing the next 30 days and if the room is vacant.
+List the next 30 days and if the room is vacant.
 
 + Response
   
@@ -35,6 +31,8 @@ Listing the next 30 days and if the room is vacant.
 
 ### 2.2. GET (bookings/{ticket})
 
+The user can retrieve the booking with the ticket.
+
 + Response
 
 ```json
@@ -47,6 +45,8 @@ Listing the next 30 days and if the room is vacant.
 ```
 
 ### 2.3. POST (bookings)
+
+The user can create a new booking.
 
 + Request
 ```json
@@ -69,6 +69,8 @@ Listing the next 30 days and if the room is vacant.
 
 ### 2.4. PUT (bookings/{ticket})
 
+The user can update the booking.
+
 + Request
 ```json
 {
@@ -90,14 +92,31 @@ Listing the next 30 days and if the room is vacant.
 
 ### 2.5. DELETE (bookings/{ticket})
 
+The user can undo the booking.
+
 + Response 204
 
-## 998. Extensions for tests
+## 3. Improvements
+
++ We can remove the manual mapping from the controller with:
+
+  + [AutoMapper](https://www.nuget.org/packages/AutoMapper)
+
++ We can separate the controllers from the services using CQRS with:
+
+  + [MediatR](https://www.nuget.org/packages/MediatR)
+
++ MediatR can also be good for separating validation from service.
+
++ Improve the error object in the return.
++ Create a docker file for deployment.
+
+## 4. Extensions used for tests
 
 + [.NET Core Test Explorer](https://marketplace.visualstudio.com/items?itemName=formulahendry.dotnet-test-explorer)
 + [Coverage Gutters](https://marketplace.visualstudio.com/items?itemName=ryanluker.vscode-coverage-gutters)
 
-## 999. NuGet Packages:
+## 5. NuGet Packages:
 
 + LastRoom.Api
   + [FluentResults](https://www.nuget.org/packages/FluentResults/)

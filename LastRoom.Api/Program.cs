@@ -1,5 +1,6 @@
 using LastRoom.Api;
 using LastRoom.Api.Services;
+using LastRoom.Api.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
