@@ -1,0 +1,1324 @@
+{
+  "LastRoom.Api.dll": {
+    "/home/jonathan/Git/LastRoom/LastRoom.Api/Program.cs": {
+      "Program": {
+        "System.Void Program::<Main>$(System.String[])": {
+          "Lines": {
+            "6": 0,
+            "7": 0,
+            "8": 0,
+            "9": 0,
+            "11": 0,
+            "12": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "20": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0
+          },
+          "Branches": [
+            {
+              "Line": 22,
+              "Offset": 172,
+              "EndOffset": 174,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 22,
+              "Offset": 172,
+              "EndOffset": 194,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "/home/jonathan/Git/LastRoom/LastRoom.Api/LastRoomDbContext.cs": {
+      "LastRoom.Api.LastRoomDbContext": {
+        "Microsoft.EntityFrameworkCore.DbSet`1<LastRoom.Api.Models.Booking> LastRoom.Api.LastRoomDbContext::get_Bookings()": {
+          "Lines": {
+            "8": 62
+          },
+          "Branches": []
+        },
+        "System.Void LastRoom.Api.LastRoomDbContext::.ctor(Microsoft.EntityFrameworkCore.DbContextOptions)": {
+          "Lines": {
+            "10": 45
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/home/jonathan/Git/LastRoom/LastRoom.Api/Services/BookingService.cs": {
+      "LastRoom.Api.Services.BookingService": {
+        "FluentResults.Result LastRoom.Api.Services.BookingService::ValidateBooking(System.DateOnly,System.DateOnly)": {
+          "Lines": {
+            "153": 18,
+            "154": 18,
+            "155": 2,
+            "156": 2,
+            "159": 16,
+            "160": 1,
+            "161": 1,
+            "164": 15,
+            "165": 1,
+            "166": 1,
+            "169": 14,
+            "170": 1,
+            "171": 1,
+            "174": 13,
+            "175": 18
+          },
+          "Branches": [
+            {
+              "Line": 154,
+              "Offset": 21,
+              "EndOffset": 23,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 2
+            },
+            {
+              "Line": 154,
+              "Offset": 21,
+              "EndOffset": 40,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 16
+            },
+            {
+              "Line": 159,
+              "Offset": 63,
+              "EndOffset": 65,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 159,
+              "Offset": 63,
+              "EndOffset": 79,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 15
+            },
+            {
+              "Line": 164,
+              "Offset": 113,
+              "EndOffset": 115,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 1
+            },
+            {
+              "Line": 164,
+              "Offset": 113,
+              "EndOffset": 129,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 14
+            },
+            {
+              "Line": 169,
+              "Offset": 164,
+              "EndOffset": 166,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 1
+            },
+            {
+              "Line": 169,
+              "Offset": 164,
+              "EndOffset": 180,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 13
+            }
+          ]
+        },
+        "FluentResults.Result LastRoom.Api.Services.BookingService::Reserved(System.DateOnly,System.DateOnly)": {
+          "Lines": {
+            "178": 17,
+            "179": 17,
+            "180": 17,
+            "181": 17,
+            "183": 17,
+            "184": 1,
+            "185": 1,
+            "188": 16,
+            "189": 17
+          },
+          "Branches": [
+            {
+              "Line": 183,
+              "Offset": 228,
+              "EndOffset": 230,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 183,
+              "Offset": 228,
+              "EndOffset": 245,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 16
+            }
+          ]
+        },
+        "FluentResults.Result LastRoom.Api.Services.BookingService::Reserved(LastRoom.Api.Models.Booking)": {
+          "Lines": {
+            "192": 3,
+            "193": 3,
+            "194": 3,
+            "195": 3,
+            "196": 3,
+            "197": 3,
+            "199": 3,
+            "200": 1,
+            "201": 1,
+            "204": 2,
+            "205": 3
+          },
+          "Branches": [
+            {
+              "Line": 199,
+              "Offset": 359,
+              "EndOffset": 361,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 199,
+              "Offset": 359,
+              "EndOffset": 376,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            }
+          ]
+        },
+        "System.Void LastRoom.Api.Services.BookingService::.ctor(LastRoom.Api.LastRoomDbContext,LastRoom.Api.Services.Interfaces.IDateTimeProvider)": {
+          "Lines": {
+            "14": 15,
+            "15": 15,
+            "16": 15,
+            "17": 15,
+            "18": 15
+          },
+          "Branches": []
+        }
+      },
+      "LastRoom.Api.Services.BookingService/<CancelBookingAsync>d__7": {
+        "System.Void LastRoom.Api.Services.BookingService/<CancelBookingAsync>d__7::MoveNext()": {
+          "Lines": {
+            "130": 2,
+            "131": 2,
+            "133": 2,
+            "134": 1,
+            "135": 1,
+            "138": 1,
+            "139": 1,
+            "141": 1,
+            "142": 2
+          },
+          "Branches": [
+            {
+              "Line": 133,
+              "Offset": 170,
+              "EndOffset": 172,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 133,
+              "Offset": 170,
+              "EndOffset": 189,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        }
+      },
+      "LastRoom.Api.Services.BookingService/<CreateNewBookingAsync>d__5": {
+        "System.Void LastRoom.Api.Services.BookingService/<CreateNewBookingAsync>d__5::MoveNext()": {
+          "Lines": {
+            "67": 17,
+            "68": 17,
+            "69": 17,
+            "70": 1,
+            "71": 1,
+            "74": 16,
+            "75": 16,
+            "76": 4,
+            "77": 4,
+            "80": 12,
+            "81": 12,
+            "82": 12,
+            "83": 12,
+            "84": 12,
+            "85": 12,
+            "86": 12,
+            "87": 12,
+            "88": 12,
+            "89": 12,
+            "90": 12,
+            "92": 12,
+            "93": 12,
+            "95": 12,
+            "96": 17
+          },
+          "Branches": [
+            {
+              "Line": 69,
+              "Offset": 71,
+              "EndOffset": 73,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 69,
+              "Offset": 71,
+              "EndOffset": 91,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 16
+            },
+            {
+              "Line": 75,
+              "Offset": 133,
+              "EndOffset": 135,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 4
+            },
+            {
+              "Line": 75,
+              "Offset": 133,
+              "EndOffset": 153,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 12
+            }
+          ]
+        }
+      },
+      "LastRoom.Api.Services.BookingService/<GetABookingByTicketAsync>d__8": {
+        "System.Void LastRoom.Api.Services.BookingService/<GetABookingByTicketAsync>d__8::MoveNext()": {
+          "Lines": {
+            "145": 9,
+            "146": 9,
+            "147": 9,
+            "148": 9,
+            "149": 9,
+            "150": 9
+          },
+          "Branches": []
+        }
+      },
+      "LastRoom.Api.Services.BookingService/<GetAllPossibleBookingDatesAsync>d__4": {
+        "System.Void LastRoom.Api.Services.BookingService/<GetAllPossibleBookingDatesAsync>d__4::MoveNext()": {
+          "Lines": {
+            "33": 3,
+            "34": 3,
+            "35": 3,
+            "36": 186,
+            "37": 90,
+            "38": 90,
+            "39": 90,
+            "40": 90,
+            "42": 3,
+            "43": 3,
+            "44": 3,
+            "45": 3,
+            "46": 3,
+            "48": 13,
+            "49": 2,
+            "50": 126,
+            "51": 60,
+            "52": 60,
+            "53": 6,
+            "54": 6,
+            "55": 6,
+            "56": 60,
+            "57": 2,
+            "59": 3,
+            "60": 3
+          },
+          "Branches": [
+            {
+              "Line": 36,
+              "Offset": 138,
+              "EndOffset": 69,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 90
+            },
+            {
+              "Line": 36,
+              "Offset": 138,
+              "EndOffset": 140,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 3
+            },
+            {
+              "Line": 48,
+              "Offset": 738,
+              "EndOffset": 519,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 2
+            },
+            {
+              "Line": 50,
+              "Offset": 680,
+              "EndOffset": 562,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 60
+            },
+            {
+              "Line": 52,
+              "Offset": 602,
+              "EndOffset": 604,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 54
+            },
+            {
+              "Line": 52,
+              "Offset": 602,
+              "EndOffset": 628,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 6
+            },
+            {
+              "Line": 52,
+              "Offset": 633,
+              "EndOffset": 635,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 6
+            },
+            {
+              "Line": 52,
+              "Offset": 633,
+              "EndOffset": 656,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 60
+            },
+            {
+              "Line": 50,
+              "Offset": 680,
+              "EndOffset": 682,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 2
+            },
+            {
+              "Line": 48,
+              "Offset": 738,
+              "EndOffset": 743,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 3
+            }
+          ]
+        }
+      },
+      "LastRoom.Api.Services.BookingService/<GetBookingAsync>d__3": {
+        "System.Void LastRoom.Api.Services.BookingService/<GetBookingAsync>d__3::MoveNext()": {
+          "Lines": {
+            "21": 3,
+            "22": 3,
+            "24": 3,
+            "25": 1,
+            "26": 1,
+            "29": 2,
+            "30": 3
+          },
+          "Branches": [
+            {
+              "Line": 24,
+              "Offset": 159,
+              "EndOffset": 161,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 24,
+              "Offset": 159,
+              "EndOffset": 180,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            }
+          ]
+        }
+      },
+      "LastRoom.Api.Services.BookingService/<UpdateBookingAsync>d__6": {
+        "System.Void LastRoom.Api.Services.BookingService/<UpdateBookingAsync>d__6::MoveNext()": {
+          "Lines": {
+            "99": 4,
+            "100": 4,
+            "102": 4,
+            "103": 1,
+            "104": 1,
+            "107": 3,
+            "108": 3,
+            "109": 1,
+            "110": 1,
+            "113": 2,
+            "114": 2,
+            "115": 1,
+            "116": 1,
+            "119": 1,
+            "120": 1,
+            "121": 1,
+            "122": 1,
+            "124": 1,
+            "126": 1,
+            "127": 4
+          },
+          "Branches": [
+            {
+              "Line": 102,
+              "Offset": 170,
+              "EndOffset": 172,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 102,
+              "Offset": 170,
+              "EndOffset": 189,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 3
+            },
+            {
+              "Line": 108,
+              "Offset": 227,
+              "EndOffset": 229,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 108,
+              "Offset": 227,
+              "EndOffset": 242,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 2
+            },
+            {
+              "Line": 114,
+              "Offset": 296,
+              "EndOffset": 298,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 1
+            },
+            {
+              "Line": 114,
+              "Offset": 296,
+              "EndOffset": 311,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 1
+            }
+          ]
+        }
+      }
+    },
+    "/home/jonathan/Git/LastRoom/LastRoom.Api/Services/DateTimeProvider.cs": {
+      "LastRoom.Api.Services.DateTimeProvider": {
+        "System.DateOnly LastRoom.Api.Services.DateTimeProvider::get_DateOnlyUtcNow()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/home/jonathan/Git/LastRoom/LastRoom.Api/Models/Booking.cs": {
+      "LastRoom.Api.Models.Booking": {
+        "System.Int32 LastRoom.Api.Models.Booking::get_Id()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        },
+        "System.Guid LastRoom.Api.Models.Booking::get_Ticket()": {
+          "Lines": {
+            "6": 23
+          },
+          "Branches": []
+        },
+        "System.DateOnly LastRoom.Api.Models.Booking::get_CheckInDate()": {
+          "Lines": {
+            "7": 82
+          },
+          "Branches": []
+        },
+        "System.DateOnly LastRoom.Api.Models.Booking::get_CheckOutDate()": {
+          "Lines": {
+            "8": 76
+          },
+          "Branches": []
+        },
+        "System.Int32 LastRoom.Api.Models.Booking::get_ClientId()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "LastRoom.Api.Models.Client LastRoom.Api.Models.Booking::get_Client()": {
+          "Lines": {
+            "11": 32
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/home/jonathan/Git/LastRoom/LastRoom.Api/Models/Client.cs": {
+      "LastRoom.Api.Models.Client": {
+        "System.Int32 LastRoom.Api.Models.Client::get_Id()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        },
+        "System.String LastRoom.Api.Models.Client::get_Identification()": {
+          "Lines": {
+            "6": 27
+          },
+          "Branches": []
+        },
+        "System.String LastRoom.Api.Models.Client::get_FullName()": {
+          "Lines": {
+            "7": 29
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/home/jonathan/Git/LastRoom/LastRoom.Api/Migrations/20220907231645_Initial.cs": {
+      "LastRoom.Api.Migrations.Initial": {
+        "System.Void LastRoom.Api.Migrations.Initial::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0
+          },
+          "Branches": []
+        },
+        "System.Void LastRoom.Api.Migrations.Initial::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/home/jonathan/Git/LastRoom/LastRoom.Api/Migrations/20220907231645_Initial.Designer.cs": {
+      "LastRoom.Api.Migrations.Initial": {
+        "System.Void LastRoom.Api.Migrations.Initial::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "18": 0,
+            "20": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "77": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/home/jonathan/Git/LastRoom/LastRoom.Api/Migrations/LastRoomDbContextModelSnapshot.cs": {
+      "LastRoom.Api.Migrations.LastRoomDbContextModelSnapshot": {
+        "System.Void LastRoom.Api.Migrations.LastRoomDbContextModelSnapshot::BuildModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "16": 0,
+            "18": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "75": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/home/jonathan/Git/LastRoom/LastRoom.Api/Errors/Booking/BookingDateTooFarError.cs": {
+      "LastRoom.Api.Errors.Booking.BookingDateTooFarError": {
+        "System.Void LastRoom.Api.Errors.Booking.BookingDateTooFarError::.ctor()": {
+          "Lines": {
+            "8": 1,
+            "9": 1,
+            "10": 1,
+            "11": 1,
+            "12": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/home/jonathan/Git/LastRoom/LastRoom.Api/Errors/Booking/BookingNotFoundError.cs": {
+      "LastRoom.Api.Errors.Booking.BookingNotFoundError": {
+        "System.Void LastRoom.Api.Errors.Booking.BookingNotFoundError::.ctor()": {
+          "Lines": {
+            "8": 3,
+            "9": 3,
+            "10": 3,
+            "11": 3,
+            "12": 3
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/home/jonathan/Git/LastRoom/LastRoom.Api/Errors/Booking/CheckOutBeforeCheckInError.cs": {
+      "LastRoom.Api.Errors.Booking.CheckOutBeforeCheckInError": {
+        "System.Void LastRoom.Api.Errors.Booking.CheckOutBeforeCheckInError::.ctor()": {
+          "Lines": {
+            "8": 2,
+            "9": 2,
+            "10": 2,
+            "11": 2,
+            "12": 2
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/home/jonathan/Git/LastRoom/LastRoom.Api/Errors/Booking/RoomAlreadyBookedError.cs": {
+      "LastRoom.Api.Errors.Booking.RoomAlreadyBookedError": {
+        "System.Void LastRoom.Api.Errors.Booking.RoomAlreadyBookedError::.ctor()": {
+          "Lines": {
+            "8": 2,
+            "9": 2,
+            "10": 2,
+            "11": 2,
+            "12": 2
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/home/jonathan/Git/LastRoom/LastRoom.Api/Errors/Booking/StartDateNotAllowedError.cs": {
+      "LastRoom.Api.Errors.Booking.StartDateNotAllowedError": {
+        "System.Void LastRoom.Api.Errors.Booking.StartDateNotAllowedError::.ctor()": {
+          "Lines": {
+            "8": 1,
+            "9": 1,
+            "10": 1,
+            "11": 1,
+            "12": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/home/jonathan/Git/LastRoom/LastRoom.Api/Errors/Booking/StayPeriodTooLongError.cs": {
+      "LastRoom.Api.Errors.Booking.StayPeriodTooLongError": {
+        "System.Void LastRoom.Api.Errors.Booking.StayPeriodTooLongError::.ctor()": {
+          "Lines": {
+            "8": 1,
+            "9": 1,
+            "10": 1,
+            "11": 1,
+            "12": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/home/jonathan/Git/LastRoom/LastRoom.Api/DTOs/BookingRequest.cs": {
+      "LastRoom.Api.DTOs.BookingRequest": {
+        "System.String LastRoom.Api.DTOs.BookingRequest::get_ClientIdentification()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.String LastRoom.Api.DTOs.BookingRequest::get_ClientFullName()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.DateOnly LastRoom.Api.DTOs.BookingRequest::get_CheckInDate()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.DateOnly LastRoom.Api.DTOs.BookingRequest::get_CheckOutDate()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/home/jonathan/Git/LastRoom/LastRoom.Api/DTOs/BookingResponse.cs": {
+      "LastRoom.Api.DTOs.BookingResponse": {
+        "System.Guid LastRoom.Api.DTOs.BookingResponse::get_Ticket()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.String LastRoom.Api.DTOs.BookingResponse::get_ClientFullName()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.DateOnly LastRoom.Api.DTOs.BookingResponse::get_CheckInDate()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.DateOnly LastRoom.Api.DTOs.BookingResponse::get_CheckOutDate()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/home/jonathan/Git/LastRoom/LastRoom.Api/DTOs/BookingVacationResponse.cs": {
+      "LastRoom.Api.DTOs.BookingDaysResponse": {
+        "System.Boolean LastRoom.Api.DTOs.BookingDaysResponse::get_Vacant()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.DateOnly LastRoom.Api.DTOs.BookingDaysResponse::get_Date()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/home/jonathan/Git/LastRoom/LastRoom.Api/Converters/DateOnlyJsonConverter.cs": {
+      "LastRoom.Api.Converters.DateOnlyJsonConverter": {
+        "System.DateOnly LastRoom.Api.Converters.DateOnlyJsonConverter::Read(System.Text.Json.Utf8JsonReader&,System.Type,System.Text.Json.JsonSerializerOptions)": {
+          "Lines": {
+            "12": 0,
+            "13": 0,
+            "14": 0
+          },
+          "Branches": []
+        },
+        "System.Void LastRoom.Api.Converters.DateOnlyJsonConverter::Write(System.Text.Json.Utf8JsonWriter,System.DateOnly,System.Text.Json.JsonSerializerOptions)": {
+          "Lines": {
+            "17": 0,
+            "18": 0,
+            "19": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/home/jonathan/Git/LastRoom/LastRoom.Api/Controllers/ApiController.cs": {
+      "LastRoom.Api.Controllers.ApiController": {
+        "Microsoft.AspNetCore.Mvc.ActionResult LastRoom.Api.Controllers.ApiController::Problem(System.Collections.Generic.List`1<FluentResults.IError>)": {
+          "Lines": {
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "18": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "26": 0,
+            "27": 0,
+            "29": 0,
+            "30": 0
+          },
+          "Branches": [
+            {
+              "Line": 13,
+              "Offset": 12,
+              "EndOffset": 14,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 13,
+              "Offset": 12,
+              "EndOffset": 42,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 20,
+              "Offset": 126,
+              "EndOffset": 59,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 23,
+              "Offset": 97,
+              "EndOffset": 99,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 23,
+              "Offset": 97,
+              "EndOffset": 105,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 20,
+              "Offset": 126,
+              "EndOffset": 128,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            }
+          ]
+        },
+        "Microsoft.AspNetCore.Mvc.ActionResult LastRoom.Api.Controllers.ApiController::Problems(Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary,LastRoom.Api.Errors.ErrorType,System.String)": {
+          "Lines": {
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0
+          },
+          "Branches": [
+            {
+              "Line": 34,
+              "Offset": 6,
+              "EndOffset": 25,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 6,
+              "EndOffset": 33,
+              "Path": 2,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 6,
+              "EndOffset": 41,
+              "Path": 3,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 6,
+              "EndOffset": 49,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "/home/jonathan/Git/LastRoom/LastRoom.Api/Controllers/BookingController.cs": {
+      "LastRoom.Api.Controllers.BookingsController": {
+        "LastRoom.Api.Models.Booking LastRoom.Api.Controllers.BookingsController::MapBookingRequestToBooking(System.Guid,LastRoom.Api.DTOs.BookingRequest)": {
+          "Lines": {
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "94": 0,
+            "95": 0,
+            "96": 0
+          },
+          "Branches": []
+        },
+        "LastRoom.Api.DTOs.BookingResponse LastRoom.Api.Controllers.BookingsController::MapBookingToBookingResponse(LastRoom.Api.Models.Booking)": {
+          "Lines": {
+            "99": 0,
+            "100": 0,
+            "101": 0,
+            "102": 0,
+            "103": 0,
+            "104": 0,
+            "105": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<LastRoom.Api.DTOs.BookingDaysResponse> LastRoom.Api.Controllers.BookingsController::MapDictOfDateToListOfBookingDaysResponse(System.Collections.Generic.Dictionary`2<System.DateOnly,System.Boolean>)": {
+          "Lines": {
+            "108": 0,
+            "109": 0,
+            "110": 0,
+            "111": 0,
+            "112": 0,
+            "113": 0,
+            "114": 0
+          },
+          "Branches": []
+        },
+        "System.Void LastRoom.Api.Controllers.BookingsController::.ctor(LastRoom.Api.Services.Interfaces.IBookingService)": {
+          "Lines": {
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0
+          },
+          "Branches": []
+        }
+      },
+      "LastRoom.Api.Controllers.BookingsController/<Delete>d__6": {
+        "System.Void LastRoom.Api.Controllers.BookingsController/<Delete>d__6::MoveNext()": {
+          "Lines": {
+            "77": 0,
+            "78": 0,
+            "80": 0,
+            "82": 0,
+            "83": 0
+          },
+          "Branches": [
+            {
+              "Line": 80,
+              "Offset": 166,
+              "EndOffset": 168,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 80,
+              "Offset": 166,
+              "EndOffset": 193,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "LastRoom.Api.Controllers.BookingsController/<Get>d__2": {
+        "System.Void LastRoom.Api.Controllers.BookingsController/<Get>d__2::MoveNext()": {
+          "Lines": {
+            "22": 0,
+            "23": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "30": 0,
+            "32": 0,
+            "33": 0
+          },
+          "Branches": [
+            {
+              "Line": 25,
+              "Offset": 166,
+              "EndOffset": 168,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 25,
+              "Offset": 166,
+              "EndOffset": 199,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "LastRoom.Api.Controllers.BookingsController/<Get>d__3": {
+        "System.Void LastRoom.Api.Controllers.BookingsController/<Get>d__3::MoveNext()": {
+          "Lines": {
+            "37": 0,
+            "38": 0,
+            "40": 0,
+            "42": 0,
+            "43": 0
+          },
+          "Branches": []
+        }
+      },
+      "LastRoom.Api.Controllers.BookingsController/<Post>d__4": {
+        "System.Void LastRoom.Api.Controllers.BookingsController/<Post>d__4::MoveNext()": {
+          "Lines": {
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "54": 0,
+            "56": 0,
+            "58": 0,
+            "59": 0
+          },
+          "Branches": [
+            {
+              "Line": 54,
+              "Offset": 204,
+              "EndOffset": 206,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 54,
+              "Offset": 204,
+              "EndOffset": 236,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "LastRoom.Api.Controllers.BookingsController/<Put>d__5": {
+        "System.Void LastRoom.Api.Controllers.BookingsController/<Put>d__5::MoveNext()": {
+          "Lines": {
+            "63": 0,
+            "64": 0,
+            "66": 0,
+            "68": 0,
+            "70": 0,
+            "72": 0,
+            "73": 0
+          },
+          "Branches": [
+            {
+              "Line": 68,
+              "Offset": 201,
+              "EndOffset": 203,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 68,
+              "Offset": 201,
+              "EndOffset": 233,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "/home/jonathan/Git/LastRoom/LastRoom.Api/Controllers/ErrorController.cs": {
+      "LastRoom.Api.Controllers.ErrorController": {
+        "Microsoft.AspNetCore.Mvc.IActionResult LastRoom.Api.Controllers.ErrorController::Error()": {
+          "Lines": {
+            "11": 0,
+            "12": 0,
+            "13": 0
+          },
+          "Branches": []
+        }
+      }
+    }
+  }
+}

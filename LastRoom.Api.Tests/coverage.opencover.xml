@@ -1,0 +1,1338 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CoverageSession>
+  <Summary numSequencePoints="462" visitedSequencePoints="169" numBranchPoints="56" visitedBranchPoints="36" sequenceCoverage="36.58" branchCoverage="64.28" maxCyclomaticComplexity="98" minCyclomaticComplexity="98" visitedClasses="16" numClasses="33" visitedMethods="24" numMethods="57" />
+  <Modules>
+    <Module hash="CAB1AA48-CB8D-4C11-8B8A-3BFA1D2CC17D">
+      <ModulePath>LastRoom.Api.dll</ModulePath>
+      <ModuleTime>2023-03-20T02:32:49</ModuleTime>
+      <ModuleName>LastRoom.Api</ModuleName>
+      <Files>
+        <File uid="1" fullPath="/home/jonathan/Git/LastRoom/LastRoom.Api/Program.cs" />
+        <File uid="2" fullPath="/home/jonathan/Git/LastRoom/LastRoom.Api/LastRoomDbContext.cs" />
+        <File uid="3" fullPath="/home/jonathan/Git/LastRoom/LastRoom.Api/Services/BookingService.cs" />
+        <File uid="4" fullPath="/home/jonathan/Git/LastRoom/LastRoom.Api/Services/DateTimeProvider.cs" />
+        <File uid="5" fullPath="/home/jonathan/Git/LastRoom/LastRoom.Api/Models/Booking.cs" />
+        <File uid="6" fullPath="/home/jonathan/Git/LastRoom/LastRoom.Api/Models/Client.cs" />
+        <File uid="7" fullPath="/home/jonathan/Git/LastRoom/LastRoom.Api/Migrations/20220907231645_Initial.cs" />
+        <File uid="8" fullPath="/home/jonathan/Git/LastRoom/LastRoom.Api/Migrations/20220907231645_Initial.Designer.cs" />
+        <File uid="9" fullPath="/home/jonathan/Git/LastRoom/LastRoom.Api/Migrations/LastRoomDbContextModelSnapshot.cs" />
+        <File uid="10" fullPath="/home/jonathan/Git/LastRoom/LastRoom.Api/Errors/Booking/BookingDateTooFarError.cs" />
+        <File uid="11" fullPath="/home/jonathan/Git/LastRoom/LastRoom.Api/Errors/Booking/BookingNotFoundError.cs" />
+        <File uid="12" fullPath="/home/jonathan/Git/LastRoom/LastRoom.Api/Errors/Booking/CheckOutBeforeCheckInError.cs" />
+        <File uid="13" fullPath="/home/jonathan/Git/LastRoom/LastRoom.Api/Errors/Booking/RoomAlreadyBookedError.cs" />
+        <File uid="14" fullPath="/home/jonathan/Git/LastRoom/LastRoom.Api/Errors/Booking/StartDateNotAllowedError.cs" />
+        <File uid="15" fullPath="/home/jonathan/Git/LastRoom/LastRoom.Api/Errors/Booking/StayPeriodTooLongError.cs" />
+        <File uid="16" fullPath="/home/jonathan/Git/LastRoom/LastRoom.Api/DTOs/BookingRequest.cs" />
+        <File uid="17" fullPath="/home/jonathan/Git/LastRoom/LastRoom.Api/DTOs/BookingResponse.cs" />
+        <File uid="18" fullPath="/home/jonathan/Git/LastRoom/LastRoom.Api/DTOs/BookingVacationResponse.cs" />
+        <File uid="19" fullPath="/home/jonathan/Git/LastRoom/LastRoom.Api/Converters/DateOnlyJsonConverter.cs" />
+        <File uid="20" fullPath="/home/jonathan/Git/LastRoom/LastRoom.Api/Controllers/ApiController.cs" />
+        <File uid="21" fullPath="/home/jonathan/Git/LastRoom/LastRoom.Api/Controllers/BookingController.cs" />
+        <File uid="22" fullPath="/home/jonathan/Git/LastRoom/LastRoom.Api/Controllers/ErrorController.cs" />
+      </Files>
+      <Classes>
+        <Class>
+          <Summary numSequencePoints="22" visitedSequencePoints="0" numBranchPoints="2" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="2" minCyclomaticComplexity="2" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" />
+          <FullName>Program</FullName>
+          <Methods>
+            <Method cyclomaticComplexity="2" nPathComplexity="2" sequenceCoverage="0" branchCoverage="0" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="22" visitedSequencePoints="0" numBranchPoints="2" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="2" minCyclomaticComplexity="2" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken />
+              <Name>System.Void Program::&lt;Main&gt;$(System.String[])</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="6" ordinal="0" sl="6" sc="1" el="6" ec="2" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="7" ordinal="1" sl="7" sc="1" el="7" ec="2" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="8" ordinal="2" sl="8" sc="1" el="8" ec="2" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="9" ordinal="3" sl="9" sc="1" el="9" ec="2" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="11" ordinal="4" sl="11" sc="1" el="11" ec="2" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="12" ordinal="5" sl="12" sc="1" el="12" ec="2" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="14" ordinal="6" sl="14" sc="1" el="14" ec="2" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="15" ordinal="7" sl="15" sc="1" el="15" ec="2" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="16" ordinal="8" sl="16" sc="1" el="16" ec="2" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="17" ordinal="9" sl="17" sc="1" el="17" ec="2" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="18" ordinal="10" sl="18" sc="1" el="18" ec="2" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="20" ordinal="11" sl="20" sc="1" el="20" ec="2" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="22" ordinal="12" sl="22" sc="1" el="22" ec="2" bec="2" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="23" ordinal="13" sl="23" sc="1" el="23" ec="2" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="24" ordinal="14" sl="24" sc="1" el="24" ec="2" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="25" ordinal="15" sl="25" sc="1" el="25" ec="2" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="26" ordinal="16" sl="26" sc="1" el="26" ec="2" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="28" ordinal="17" sl="28" sc="1" el="28" ec="2" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="29" ordinal="18" sl="29" sc="1" el="29" ec="2" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="30" ordinal="19" sl="30" sc="1" el="30" ec="2" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="31" ordinal="20" sl="31" sc="1" el="31" ec="2" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="32" ordinal="21" sl="32" sc="1" el="32" ec="2" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints>
+                <BranchPoint vc="0" uspid="22" ordinal="0" path="0" offset="172" offsetend="174" sl="22" fileid="1" />
+                <BranchPoint vc="0" uspid="22" ordinal="1" path="1" offset="172" offsetend="194" sl="22" fileid="1" />
+              </BranchPoints>
+              <MethodPoint vc="0" uspid="0" p8:type="SequencePoint" ordinal="0" offset="0" sc="0" sl="6" ec="1" el="32" bec="0" bev="0" fileid="1" xmlns:p8="xsi" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="2" visitedSequencePoints="2" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="1" numClasses="1" visitedMethods="2" numMethods="2" />
+          <FullName>LastRoom.Api.LastRoomDbContext</FullName>
+          <Methods>
+            <Method cyclomaticComplexity="1" nPathComplexity="1" sequenceCoverage="100" branchCoverage="100" isConstructor="False" isGetter="True" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="1" visitedSequencePoints="1" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken />
+              <Name>Microsoft.EntityFrameworkCore.DbSet`1&lt;LastRoom.Api.Models.Booking&gt; LastRoom.Api.LastRoomDbContext::get_Bookings()</Name>
+              <FileRef uid="2" />
+              <SequencePoints>
+                <SequencePoint vc="62" uspid="8" ordinal="0" sl="8" sc="1" el="8" ec="2" bec="0" bev="0" fileid="2" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="1" uspid="0" p8:type="SequencePoint" ordinal="0" offset="0" sc="0" sl="8" ec="1" el="8" bec="0" bev="0" fileid="2" xmlns:p8="xsi" />
+            </Method>
+            <Method cyclomaticComplexity="1" nPathComplexity="1" sequenceCoverage="100" branchCoverage="100" isConstructor="True" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="1" visitedSequencePoints="1" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken />
+              <Name>System.Void LastRoom.Api.LastRoomDbContext::.ctor(Microsoft.EntityFrameworkCore.DbContextOptions)</Name>
+              <FileRef uid="2" />
+              <SequencePoints>
+                <SequencePoint vc="45" uspid="10" ordinal="0" sl="10" sc="1" el="10" ec="2" bec="0" bev="0" fileid="2" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="1" uspid="0" p8:type="SequencePoint" ordinal="1" offset="1" sc="0" sl="10" ec="1" el="10" bec="0" bev="0" fileid="2" xmlns:p8="xsi" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="40" visitedSequencePoints="40" numBranchPoints="12" visitedBranchPoints="12" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="8" minCyclomaticComplexity="1" visitedClasses="1" numClasses="1" visitedMethods="4" numMethods="4" />
+          <FullName>LastRoom.Api.Services.BookingService</FullName>
+          <Methods>
+            <Method cyclomaticComplexity="8" nPathComplexity="8" sequenceCoverage="100" branchCoverage="100" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="15" visitedSequencePoints="15" numBranchPoints="8" visitedBranchPoints="8" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="8" minCyclomaticComplexity="8" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken />
+              <Name>FluentResults.Result LastRoom.Api.Services.BookingService::ValidateBooking(System.DateOnly,System.DateOnly)</Name>
+              <FileRef uid="3" />
+              <SequencePoints>
+                <SequencePoint vc="18" uspid="153" ordinal="0" sl="153" sc="1" el="153" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="18" uspid="154" ordinal="1" sl="154" sc="1" el="154" ec="2" bec="2" bev="2" fileid="3" />
+                <SequencePoint vc="2" uspid="155" ordinal="2" sl="155" sc="1" el="155" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="2" uspid="156" ordinal="3" sl="156" sc="1" el="156" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="16" uspid="159" ordinal="4" sl="159" sc="1" el="159" ec="2" bec="2" bev="2" fileid="3" />
+                <SequencePoint vc="1" uspid="160" ordinal="5" sl="160" sc="1" el="160" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="1" uspid="161" ordinal="6" sl="161" sc="1" el="161" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="15" uspid="164" ordinal="7" sl="164" sc="1" el="164" ec="2" bec="2" bev="2" fileid="3" />
+                <SequencePoint vc="1" uspid="165" ordinal="8" sl="165" sc="1" el="165" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="1" uspid="166" ordinal="9" sl="166" sc="1" el="166" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="14" uspid="169" ordinal="10" sl="169" sc="1" el="169" ec="2" bec="2" bev="2" fileid="3" />
+                <SequencePoint vc="1" uspid="170" ordinal="11" sl="170" sc="1" el="170" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="1" uspid="171" ordinal="12" sl="171" sc="1" el="171" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="13" uspid="174" ordinal="13" sl="174" sc="1" el="174" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="18" uspid="175" ordinal="14" sl="175" sc="1" el="175" ec="2" bec="0" bev="0" fileid="3" />
+              </SequencePoints>
+              <BranchPoints>
+                <BranchPoint vc="2" uspid="154" ordinal="0" path="0" offset="21" offsetend="23" sl="154" fileid="3" />
+                <BranchPoint vc="16" uspid="154" ordinal="1" path="1" offset="21" offsetend="40" sl="154" fileid="3" />
+                <BranchPoint vc="1" uspid="159" ordinal="2" path="0" offset="63" offsetend="65" sl="159" fileid="3" />
+                <BranchPoint vc="15" uspid="159" ordinal="3" path="1" offset="63" offsetend="79" sl="159" fileid="3" />
+                <BranchPoint vc="1" uspid="164" ordinal="4" path="0" offset="113" offsetend="115" sl="164" fileid="3" />
+                <BranchPoint vc="14" uspid="164" ordinal="5" path="1" offset="113" offsetend="129" sl="164" fileid="3" />
+                <BranchPoint vc="1" uspid="169" ordinal="6" path="0" offset="164" offsetend="166" sl="169" fileid="3" />
+                <BranchPoint vc="13" uspid="169" ordinal="7" path="1" offset="164" offsetend="180" sl="169" fileid="3" />
+              </BranchPoints>
+              <MethodPoint vc="15" uspid="0" p8:type="SequencePoint" ordinal="0" offset="0" sc="0" sl="153" ec="1" el="175" bec="0" bev="0" fileid="3" xmlns:p8="xsi" />
+            </Method>
+            <Method cyclomaticComplexity="2" nPathComplexity="2" sequenceCoverage="100" branchCoverage="100" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="9" visitedSequencePoints="9" numBranchPoints="2" visitedBranchPoints="2" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="2" minCyclomaticComplexity="2" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken />
+              <Name>FluentResults.Result LastRoom.Api.Services.BookingService::Reserved(System.DateOnly,System.DateOnly)</Name>
+              <FileRef uid="3" />
+              <SequencePoints>
+                <SequencePoint vc="17" uspid="178" ordinal="0" sl="178" sc="1" el="178" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="17" uspid="179" ordinal="1" sl="179" sc="1" el="179" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="17" uspid="180" ordinal="2" sl="180" sc="1" el="180" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="17" uspid="181" ordinal="3" sl="181" sc="1" el="181" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="17" uspid="183" ordinal="4" sl="183" sc="1" el="183" ec="2" bec="2" bev="2" fileid="3" />
+                <SequencePoint vc="1" uspid="184" ordinal="5" sl="184" sc="1" el="184" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="1" uspid="185" ordinal="6" sl="185" sc="1" el="185" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="16" uspid="188" ordinal="7" sl="188" sc="1" el="188" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="17" uspid="189" ordinal="8" sl="189" sc="1" el="189" ec="2" bec="0" bev="0" fileid="3" />
+              </SequencePoints>
+              <BranchPoints>
+                <BranchPoint vc="1" uspid="183" ordinal="0" path="0" offset="228" offsetend="230" sl="183" fileid="3" />
+                <BranchPoint vc="16" uspid="183" ordinal="1" path="1" offset="228" offsetend="245" sl="183" fileid="3" />
+              </BranchPoints>
+              <MethodPoint vc="9" uspid="0" p8:type="SequencePoint" ordinal="1" offset="1" sc="0" sl="178" ec="1" el="189" bec="0" bev="0" fileid="3" xmlns:p8="xsi" />
+            </Method>
+            <Method cyclomaticComplexity="2" nPathComplexity="2" sequenceCoverage="100" branchCoverage="100" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="11" visitedSequencePoints="11" numBranchPoints="2" visitedBranchPoints="2" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="2" minCyclomaticComplexity="2" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken />
+              <Name>FluentResults.Result LastRoom.Api.Services.BookingService::Reserved(LastRoom.Api.Models.Booking)</Name>
+              <FileRef uid="3" />
+              <SequencePoints>
+                <SequencePoint vc="3" uspid="192" ordinal="0" sl="192" sc="1" el="192" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="3" uspid="193" ordinal="1" sl="193" sc="1" el="193" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="3" uspid="194" ordinal="2" sl="194" sc="1" el="194" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="3" uspid="195" ordinal="3" sl="195" sc="1" el="195" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="3" uspid="196" ordinal="4" sl="196" sc="1" el="196" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="3" uspid="197" ordinal="5" sl="197" sc="1" el="197" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="3" uspid="199" ordinal="6" sl="199" sc="1" el="199" ec="2" bec="2" bev="2" fileid="3" />
+                <SequencePoint vc="1" uspid="200" ordinal="7" sl="200" sc="1" el="200" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="1" uspid="201" ordinal="8" sl="201" sc="1" el="201" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="2" uspid="204" ordinal="9" sl="204" sc="1" el="204" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="3" uspid="205" ordinal="10" sl="205" sc="1" el="205" ec="2" bec="0" bev="0" fileid="3" />
+              </SequencePoints>
+              <BranchPoints>
+                <BranchPoint vc="1" uspid="199" ordinal="0" path="0" offset="359" offsetend="361" sl="199" fileid="3" />
+                <BranchPoint vc="2" uspid="199" ordinal="1" path="1" offset="359" offsetend="376" sl="199" fileid="3" />
+              </BranchPoints>
+              <MethodPoint vc="11" uspid="0" p8:type="SequencePoint" ordinal="2" offset="2" sc="0" sl="192" ec="1" el="205" bec="0" bev="0" fileid="3" xmlns:p8="xsi" />
+            </Method>
+            <Method cyclomaticComplexity="1" nPathComplexity="1" sequenceCoverage="100" branchCoverage="100" isConstructor="True" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="5" visitedSequencePoints="5" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken />
+              <Name>System.Void LastRoom.Api.Services.BookingService::.ctor(LastRoom.Api.LastRoomDbContext,LastRoom.Api.Services.Interfaces.IDateTimeProvider)</Name>
+              <FileRef uid="3" />
+              <SequencePoints>
+                <SequencePoint vc="15" uspid="14" ordinal="0" sl="14" sc="1" el="14" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="15" uspid="15" ordinal="1" sl="15" sc="1" el="15" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="15" uspid="16" ordinal="2" sl="16" sc="1" el="16" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="15" uspid="17" ordinal="3" sl="17" sc="1" el="17" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="15" uspid="18" ordinal="4" sl="18" sc="1" el="18" ec="2" bec="0" bev="0" fileid="3" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="5" uspid="0" p8:type="SequencePoint" ordinal="3" offset="3" sc="0" sl="14" ec="1" el="18" bec="0" bev="0" fileid="3" xmlns:p8="xsi" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="9" visitedSequencePoints="9" numBranchPoints="2" visitedBranchPoints="2" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="2" minCyclomaticComplexity="2" visitedClasses="1" numClasses="1" visitedMethods="1" numMethods="1" />
+          <FullName>LastRoom.Api.Services.BookingService/&lt;CancelBookingAsync&gt;d__7</FullName>
+          <Methods>
+            <Method cyclomaticComplexity="2" nPathComplexity="2" sequenceCoverage="100" branchCoverage="100" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="9" visitedSequencePoints="9" numBranchPoints="2" visitedBranchPoints="2" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="2" minCyclomaticComplexity="2" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken />
+              <Name>System.Void LastRoom.Api.Services.BookingService/&lt;CancelBookingAsync&gt;d__7::MoveNext()</Name>
+              <FileRef uid="3" />
+              <SequencePoints>
+                <SequencePoint vc="2" uspid="130" ordinal="0" sl="130" sc="1" el="130" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="2" uspid="131" ordinal="1" sl="131" sc="1" el="131" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="2" uspid="133" ordinal="2" sl="133" sc="1" el="133" ec="2" bec="2" bev="2" fileid="3" />
+                <SequencePoint vc="1" uspid="134" ordinal="3" sl="134" sc="1" el="134" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="1" uspid="135" ordinal="4" sl="135" sc="1" el="135" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="1" uspid="138" ordinal="5" sl="138" sc="1" el="138" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="1" uspid="139" ordinal="6" sl="139" sc="1" el="139" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="1" uspid="141" ordinal="7" sl="141" sc="1" el="141" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="2" uspid="142" ordinal="8" sl="142" sc="1" el="142" ec="2" bec="0" bev="0" fileid="3" />
+              </SequencePoints>
+              <BranchPoints>
+                <BranchPoint vc="1" uspid="133" ordinal="0" path="0" offset="170" offsetend="172" sl="133" fileid="3" />
+                <BranchPoint vc="1" uspid="133" ordinal="1" path="1" offset="170" offsetend="189" sl="133" fileid="3" />
+              </BranchPoints>
+              <MethodPoint vc="9" uspid="0" p8:type="SequencePoint" ordinal="0" offset="0" sc="0" sl="130" ec="1" el="142" bec="0" bev="0" fileid="3" xmlns:p8="xsi" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="24" visitedSequencePoints="24" numBranchPoints="4" visitedBranchPoints="4" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="4" minCyclomaticComplexity="4" visitedClasses="1" numClasses="1" visitedMethods="1" numMethods="1" />
+          <FullName>LastRoom.Api.Services.BookingService/&lt;CreateNewBookingAsync&gt;d__5</FullName>
+          <Methods>
+            <Method cyclomaticComplexity="4" nPathComplexity="4" sequenceCoverage="100" branchCoverage="100" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="24" visitedSequencePoints="24" numBranchPoints="4" visitedBranchPoints="4" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="4" minCyclomaticComplexity="4" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken />
+              <Name>System.Void LastRoom.Api.Services.BookingService/&lt;CreateNewBookingAsync&gt;d__5::MoveNext()</Name>
+              <FileRef uid="3" />
+              <SequencePoints>
+                <SequencePoint vc="17" uspid="67" ordinal="0" sl="67" sc="1" el="67" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="17" uspid="68" ordinal="1" sl="68" sc="1" el="68" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="17" uspid="69" ordinal="2" sl="69" sc="1" el="69" ec="2" bec="2" bev="2" fileid="3" />
+                <SequencePoint vc="1" uspid="70" ordinal="3" sl="70" sc="1" el="70" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="1" uspid="71" ordinal="4" sl="71" sc="1" el="71" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="16" uspid="74" ordinal="5" sl="74" sc="1" el="74" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="16" uspid="75" ordinal="6" sl="75" sc="1" el="75" ec="2" bec="2" bev="2" fileid="3" />
+                <SequencePoint vc="4" uspid="76" ordinal="7" sl="76" sc="1" el="76" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="4" uspid="77" ordinal="8" sl="77" sc="1" el="77" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="12" uspid="80" ordinal="9" sl="80" sc="1" el="80" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="12" uspid="81" ordinal="10" sl="81" sc="1" el="81" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="12" uspid="82" ordinal="11" sl="82" sc="1" el="82" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="12" uspid="83" ordinal="12" sl="83" sc="1" el="83" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="12" uspid="84" ordinal="13" sl="84" sc="1" el="84" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="12" uspid="85" ordinal="14" sl="85" sc="1" el="85" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="12" uspid="86" ordinal="15" sl="86" sc="1" el="86" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="12" uspid="87" ordinal="16" sl="87" sc="1" el="87" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="12" uspid="88" ordinal="17" sl="88" sc="1" el="88" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="12" uspid="89" ordinal="18" sl="89" sc="1" el="89" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="12" uspid="90" ordinal="19" sl="90" sc="1" el="90" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="12" uspid="92" ordinal="20" sl="92" sc="1" el="92" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="12" uspid="93" ordinal="21" sl="93" sc="1" el="93" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="12" uspid="95" ordinal="22" sl="95" sc="1" el="95" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="17" uspid="96" ordinal="23" sl="96" sc="1" el="96" ec="2" bec="0" bev="0" fileid="3" />
+              </SequencePoints>
+              <BranchPoints>
+                <BranchPoint vc="1" uspid="69" ordinal="0" path="0" offset="71" offsetend="73" sl="69" fileid="3" />
+                <BranchPoint vc="16" uspid="69" ordinal="1" path="1" offset="71" offsetend="91" sl="69" fileid="3" />
+                <BranchPoint vc="4" uspid="75" ordinal="2" path="0" offset="133" offsetend="135" sl="75" fileid="3" />
+                <BranchPoint vc="12" uspid="75" ordinal="3" path="1" offset="133" offsetend="153" sl="75" fileid="3" />
+              </BranchPoints>
+              <MethodPoint vc="24" uspid="0" p8:type="SequencePoint" ordinal="0" offset="0" sc="0" sl="67" ec="1" el="96" bec="0" bev="0" fileid="3" xmlns:p8="xsi" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="6" visitedSequencePoints="6" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="1" numClasses="1" visitedMethods="1" numMethods="1" />
+          <FullName>LastRoom.Api.Services.BookingService/&lt;GetABookingByTicketAsync&gt;d__8</FullName>
+          <Methods>
+            <Method cyclomaticComplexity="1" nPathComplexity="1" sequenceCoverage="100" branchCoverage="100" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="6" visitedSequencePoints="6" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken />
+              <Name>System.Void LastRoom.Api.Services.BookingService/&lt;GetABookingByTicketAsync&gt;d__8::MoveNext()</Name>
+              <FileRef uid="3" />
+              <SequencePoints>
+                <SequencePoint vc="9" uspid="145" ordinal="0" sl="145" sc="1" el="145" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="9" uspid="146" ordinal="1" sl="146" sc="1" el="146" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="9" uspid="147" ordinal="2" sl="147" sc="1" el="147" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="9" uspid="148" ordinal="3" sl="148" sc="1" el="148" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="9" uspid="149" ordinal="4" sl="149" sc="1" el="149" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="9" uspid="150" ordinal="5" sl="150" sc="1" el="150" ec="2" bec="0" bev="0" fileid="3" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="6" uspid="0" p8:type="SequencePoint" ordinal="0" offset="0" sc="0" sl="145" ec="1" el="150" bec="0" bev="0" fileid="3" xmlns:p8="xsi" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="25" visitedSequencePoints="25" numBranchPoints="10" visitedBranchPoints="10" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="10" minCyclomaticComplexity="10" visitedClasses="1" numClasses="1" visitedMethods="1" numMethods="1" />
+          <FullName>LastRoom.Api.Services.BookingService/&lt;GetAllPossibleBookingDatesAsync&gt;d__4</FullName>
+          <Methods>
+            <Method cyclomaticComplexity="10" nPathComplexity="10" sequenceCoverage="100" branchCoverage="100" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="25" visitedSequencePoints="25" numBranchPoints="10" visitedBranchPoints="10" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="10" minCyclomaticComplexity="10" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken />
+              <Name>System.Void LastRoom.Api.Services.BookingService/&lt;GetAllPossibleBookingDatesAsync&gt;d__4::MoveNext()</Name>
+              <FileRef uid="3" />
+              <SequencePoints>
+                <SequencePoint vc="3" uspid="33" ordinal="0" sl="33" sc="1" el="33" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="3" uspid="34" ordinal="1" sl="34" sc="1" el="34" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="3" uspid="35" ordinal="2" sl="35" sc="1" el="35" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="186" uspid="36" ordinal="3" sl="36" sc="1" el="36" ec="2" bec="2" bev="2" fileid="3" />
+                <SequencePoint vc="90" uspid="37" ordinal="4" sl="37" sc="1" el="37" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="90" uspid="38" ordinal="5" sl="38" sc="1" el="38" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="90" uspid="39" ordinal="6" sl="39" sc="1" el="39" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="90" uspid="40" ordinal="7" sl="40" sc="1" el="40" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="3" uspid="42" ordinal="8" sl="42" sc="1" el="42" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="3" uspid="43" ordinal="9" sl="43" sc="1" el="43" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="3" uspid="44" ordinal="10" sl="44" sc="1" el="44" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="3" uspid="45" ordinal="11" sl="45" sc="1" el="45" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="3" uspid="46" ordinal="12" sl="46" sc="1" el="46" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="13" uspid="48" ordinal="13" sl="48" sc="1" el="48" ec="2" bec="2" bev="2" fileid="3" />
+                <SequencePoint vc="2" uspid="49" ordinal="14" sl="49" sc="1" el="49" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="126" uspid="50" ordinal="15" sl="50" sc="1" el="50" ec="2" bec="2" bev="2" fileid="3" />
+                <SequencePoint vc="60" uspid="51" ordinal="16" sl="51" sc="1" el="51" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="60" uspid="52" ordinal="17" sl="52" sc="1" el="52" ec="2" bec="4" bev="4" fileid="3" />
+                <SequencePoint vc="6" uspid="53" ordinal="18" sl="53" sc="1" el="53" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="6" uspid="54" ordinal="19" sl="54" sc="1" el="54" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="6" uspid="55" ordinal="20" sl="55" sc="1" el="55" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="60" uspid="56" ordinal="21" sl="56" sc="1" el="56" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="2" uspid="57" ordinal="22" sl="57" sc="1" el="57" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="3" uspid="59" ordinal="23" sl="59" sc="1" el="59" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="3" uspid="60" ordinal="24" sl="60" sc="1" el="60" ec="2" bec="0" bev="0" fileid="3" />
+              </SequencePoints>
+              <BranchPoints>
+                <BranchPoint vc="90" uspid="36" ordinal="1" path="1" offset="138" offsetend="69" sl="36" fileid="3" />
+                <BranchPoint vc="3" uspid="36" ordinal="0" path="0" offset="138" offsetend="140" sl="36" fileid="3" />
+                <BranchPoint vc="2" uspid="48" ordinal="9" path="1" offset="738" offsetend="519" sl="48" fileid="3" />
+                <BranchPoint vc="60" uspid="50" ordinal="7" path="1" offset="680" offsetend="562" sl="50" fileid="3" />
+                <BranchPoint vc="54" uspid="52" ordinal="2" path="0" offset="602" offsetend="604" sl="52" fileid="3" />
+                <BranchPoint vc="6" uspid="52" ordinal="3" path="1" offset="602" offsetend="628" sl="52" fileid="3" />
+                <BranchPoint vc="6" uspid="52" ordinal="4" path="0" offset="633" offsetend="635" sl="52" fileid="3" />
+                <BranchPoint vc="60" uspid="52" ordinal="5" path="1" offset="633" offsetend="656" sl="52" fileid="3" />
+                <BranchPoint vc="2" uspid="50" ordinal="6" path="0" offset="680" offsetend="682" sl="50" fileid="3" />
+                <BranchPoint vc="3" uspid="48" ordinal="8" path="0" offset="738" offsetend="743" sl="48" fileid="3" />
+              </BranchPoints>
+              <MethodPoint vc="25" uspid="0" p8:type="SequencePoint" ordinal="0" offset="0" sc="0" sl="33" ec="1" el="60" bec="0" bev="0" fileid="3" xmlns:p8="xsi" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="7" visitedSequencePoints="7" numBranchPoints="2" visitedBranchPoints="2" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="2" minCyclomaticComplexity="2" visitedClasses="1" numClasses="1" visitedMethods="1" numMethods="1" />
+          <FullName>LastRoom.Api.Services.BookingService/&lt;GetBookingAsync&gt;d__3</FullName>
+          <Methods>
+            <Method cyclomaticComplexity="2" nPathComplexity="2" sequenceCoverage="100" branchCoverage="100" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="7" visitedSequencePoints="7" numBranchPoints="2" visitedBranchPoints="2" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="2" minCyclomaticComplexity="2" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken />
+              <Name>System.Void LastRoom.Api.Services.BookingService/&lt;GetBookingAsync&gt;d__3::MoveNext()</Name>
+              <FileRef uid="3" />
+              <SequencePoints>
+                <SequencePoint vc="3" uspid="21" ordinal="0" sl="21" sc="1" el="21" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="3" uspid="22" ordinal="1" sl="22" sc="1" el="22" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="3" uspid="24" ordinal="2" sl="24" sc="1" el="24" ec="2" bec="2" bev="2" fileid="3" />
+                <SequencePoint vc="1" uspid="25" ordinal="3" sl="25" sc="1" el="25" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="1" uspid="26" ordinal="4" sl="26" sc="1" el="26" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="2" uspid="29" ordinal="5" sl="29" sc="1" el="29" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="3" uspid="30" ordinal="6" sl="30" sc="1" el="30" ec="2" bec="0" bev="0" fileid="3" />
+              </SequencePoints>
+              <BranchPoints>
+                <BranchPoint vc="1" uspid="24" ordinal="0" path="0" offset="159" offsetend="161" sl="24" fileid="3" />
+                <BranchPoint vc="2" uspid="24" ordinal="1" path="1" offset="159" offsetend="180" sl="24" fileid="3" />
+              </BranchPoints>
+              <MethodPoint vc="7" uspid="0" p8:type="SequencePoint" ordinal="0" offset="0" sc="0" sl="21" ec="1" el="30" bec="0" bev="0" fileid="3" xmlns:p8="xsi" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="20" visitedSequencePoints="20" numBranchPoints="6" visitedBranchPoints="6" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="6" minCyclomaticComplexity="6" visitedClasses="1" numClasses="1" visitedMethods="1" numMethods="1" />
+          <FullName>LastRoom.Api.Services.BookingService/&lt;UpdateBookingAsync&gt;d__6</FullName>
+          <Methods>
+            <Method cyclomaticComplexity="6" nPathComplexity="6" sequenceCoverage="100" branchCoverage="100" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="20" visitedSequencePoints="20" numBranchPoints="6" visitedBranchPoints="6" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="6" minCyclomaticComplexity="6" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken />
+              <Name>System.Void LastRoom.Api.Services.BookingService/&lt;UpdateBookingAsync&gt;d__6::MoveNext()</Name>
+              <FileRef uid="3" />
+              <SequencePoints>
+                <SequencePoint vc="4" uspid="99" ordinal="0" sl="99" sc="1" el="99" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="4" uspid="100" ordinal="1" sl="100" sc="1" el="100" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="4" uspid="102" ordinal="2" sl="102" sc="1" el="102" ec="2" bec="2" bev="2" fileid="3" />
+                <SequencePoint vc="1" uspid="103" ordinal="3" sl="103" sc="1" el="103" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="1" uspid="104" ordinal="4" sl="104" sc="1" el="104" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="3" uspid="107" ordinal="5" sl="107" sc="1" el="107" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="3" uspid="108" ordinal="6" sl="108" sc="1" el="108" ec="2" bec="2" bev="2" fileid="3" />
+                <SequencePoint vc="1" uspid="109" ordinal="7" sl="109" sc="1" el="109" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="1" uspid="110" ordinal="8" sl="110" sc="1" el="110" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="2" uspid="113" ordinal="9" sl="113" sc="1" el="113" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="2" uspid="114" ordinal="10" sl="114" sc="1" el="114" ec="2" bec="2" bev="2" fileid="3" />
+                <SequencePoint vc="1" uspid="115" ordinal="11" sl="115" sc="1" el="115" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="1" uspid="116" ordinal="12" sl="116" sc="1" el="116" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="1" uspid="119" ordinal="13" sl="119" sc="1" el="119" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="1" uspid="120" ordinal="14" sl="120" sc="1" el="120" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="1" uspid="121" ordinal="15" sl="121" sc="1" el="121" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="1" uspid="122" ordinal="16" sl="122" sc="1" el="122" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="1" uspid="124" ordinal="17" sl="124" sc="1" el="124" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="1" uspid="126" ordinal="18" sl="126" sc="1" el="126" ec="2" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="4" uspid="127" ordinal="19" sl="127" sc="1" el="127" ec="2" bec="0" bev="0" fileid="3" />
+              </SequencePoints>
+              <BranchPoints>
+                <BranchPoint vc="1" uspid="102" ordinal="0" path="0" offset="170" offsetend="172" sl="102" fileid="3" />
+                <BranchPoint vc="3" uspid="102" ordinal="1" path="1" offset="170" offsetend="189" sl="102" fileid="3" />
+                <BranchPoint vc="1" uspid="108" ordinal="2" path="0" offset="227" offsetend="229" sl="108" fileid="3" />
+                <BranchPoint vc="2" uspid="108" ordinal="3" path="1" offset="227" offsetend="242" sl="108" fileid="3" />
+                <BranchPoint vc="1" uspid="114" ordinal="4" path="0" offset="296" offsetend="298" sl="114" fileid="3" />
+                <BranchPoint vc="1" uspid="114" ordinal="5" path="1" offset="296" offsetend="311" sl="114" fileid="3" />
+              </BranchPoints>
+              <MethodPoint vc="20" uspid="0" p8:type="SequencePoint" ordinal="0" offset="0" sc="0" sl="99" ec="1" el="127" bec="0" bev="0" fileid="3" xmlns:p8="xsi" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" />
+          <FullName>LastRoom.Api.Services.DateTimeProvider</FullName>
+          <Methods>
+            <Method cyclomaticComplexity="1" nPathComplexity="1" sequenceCoverage="0" branchCoverage="100" isConstructor="False" isGetter="True" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken />
+              <Name>System.DateOnly LastRoom.Api.Services.DateTimeProvider::get_DateOnlyUtcNow()</Name>
+              <FileRef uid="4" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="7" ordinal="0" sl="7" sc="1" el="7" ec="2" bec="0" bev="0" fileid="4" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="0" uspid="0" p8:type="SequencePoint" ordinal="0" offset="0" sc="0" sl="7" ec="1" el="7" bec="0" bev="0" fileid="4" xmlns:p8="xsi" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="6" visitedSequencePoints="4" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="66.66" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="1" numClasses="1" visitedMethods="4" numMethods="6" />
+          <FullName>LastRoom.Api.Models.Booking</FullName>
+          <Methods>
+            <Method cyclomaticComplexity="1" nPathComplexity="1" sequenceCoverage="0" branchCoverage="100" isConstructor="False" isGetter="True" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken />
+              <Name>System.Int32 LastRoom.Api.Models.Booking::get_Id()</Name>
+              <FileRef uid="5" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="5" ordinal="0" sl="5" sc="1" el="5" ec="2" bec="0" bev="0" fileid="5" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="0" uspid="0" p8:type="SequencePoint" ordinal="0" offset="0" sc="0" sl="5" ec="1" el="5" bec="0" bev="0" fileid="5" xmlns:p8="xsi" />
+            </Method>
+            <Method cyclomaticComplexity="1" nPathComplexity="1" sequenceCoverage="100" branchCoverage="100" isConstructor="False" isGetter="True" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="1" visitedSequencePoints="1" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken />
+              <Name>System.Guid LastRoom.Api.Models.Booking::get_Ticket()</Name>
+              <FileRef uid="5" />
+              <SequencePoints>
+                <SequencePoint vc="23" uspid="6" ordinal="0" sl="6" sc="1" el="6" ec="2" bec="0" bev="0" fileid="5" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="1" uspid="0" p8:type="SequencePoint" ordinal="1" offset="1" sc="0" sl="6" ec="1" el="6" bec="0" bev="0" fileid="5" xmlns:p8="xsi" />
+            </Method>
+            <Method cyclomaticComplexity="1" nPathComplexity="1" sequenceCoverage="100" branchCoverage="100" isConstructor="False" isGetter="True" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="1" visitedSequencePoints="1" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken />
+              <Name>System.DateOnly LastRoom.Api.Models.Booking::get_CheckInDate()</Name>
+              <FileRef uid="5" />
+              <SequencePoints>
+                <SequencePoint vc="82" uspid="7" ordinal="0" sl="7" sc="1" el="7" ec="2" bec="0" bev="0" fileid="5" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="1" uspid="0" p8:type="SequencePoint" ordinal="2" offset="2" sc="0" sl="7" ec="1" el="7" bec="0" bev="0" fileid="5" xmlns:p8="xsi" />
+            </Method>
+            <Method cyclomaticComplexity="1" nPathComplexity="1" sequenceCoverage="100" branchCoverage="100" isConstructor="False" isGetter="True" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="1" visitedSequencePoints="1" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken />
+              <Name>System.DateOnly LastRoom.Api.Models.Booking::get_CheckOutDate()</Name>
+              <FileRef uid="5" />
+              <SequencePoints>
+                <SequencePoint vc="76" uspid="8" ordinal="0" sl="8" sc="1" el="8" ec="2" bec="0" bev="0" fileid="5" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="1" uspid="0" p8:type="SequencePoint" ordinal="3" offset="3" sc="0" sl="8" ec="1" el="8" bec="0" bev="0" fileid="5" xmlns:p8="xsi" />
+            </Method>
+            <Method cyclomaticComplexity="1" nPathComplexity="1" sequenceCoverage="0" branchCoverage="100" isConstructor="False" isGetter="True" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken />
+              <Name>System.Int32 LastRoom.Api.Models.Booking::get_ClientId()</Name>
+              <FileRef uid="5" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="10" ordinal="0" sl="10" sc="1" el="10" ec="2" bec="0" bev="0" fileid="5" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="0" uspid="0" p8:type="SequencePoint" ordinal="4" offset="4" sc="0" sl="10" ec="1" el="10" bec="0" bev="0" fileid="5" xmlns:p8="xsi" />
+            </Method>
+            <Method cyclomaticComplexity="1" nPathComplexity="1" sequenceCoverage="100" branchCoverage="100" isConstructor="False" isGetter="True" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="1" visitedSequencePoints="1" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken />
+              <Name>LastRoom.Api.Models.Client LastRoom.Api.Models.Booking::get_Client()</Name>
+              <FileRef uid="5" />
+              <SequencePoints>
+                <SequencePoint vc="32" uspid="11" ordinal="0" sl="11" sc="1" el="11" ec="2" bec="0" bev="0" fileid="5" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="1" uspid="0" p8:type="SequencePoint" ordinal="5" offset="5" sc="0" sl="11" ec="1" el="11" bec="0" bev="0" fileid="5" xmlns:p8="xsi" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="3" visitedSequencePoints="2" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="66.66" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="1" numClasses="1" visitedMethods="2" numMethods="3" />
+          <FullName>LastRoom.Api.Models.Client</FullName>
+          <Methods>
+            <Method cyclomaticComplexity="1" nPathComplexity="1" sequenceCoverage="0" branchCoverage="100" isConstructor="False" isGetter="True" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken />
+              <Name>System.Int32 LastRoom.Api.Models.Client::get_Id()</Name>
+              <FileRef uid="6" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="5" ordinal="0" sl="5" sc="1" el="5" ec="2" bec="0" bev="0" fileid="6" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="0" uspid="0" p8:type="SequencePoint" ordinal="0" offset="0" sc="0" sl="5" ec="1" el="5" bec="0" bev="0" fileid="6" xmlns:p8="xsi" />
+            </Method>
+            <Method cyclomaticComplexity="1" nPathComplexity="1" sequenceCoverage="100" branchCoverage="100" isConstructor="False" isGetter="True" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="1" visitedSequencePoints="1" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken />
+              <Name>System.String LastRoom.Api.Models.Client::get_Identification()</Name>
+              <FileRef uid="6" />
+              <SequencePoints>
+                <SequencePoint vc="27" uspid="6" ordinal="0" sl="6" sc="1" el="6" ec="2" bec="0" bev="0" fileid="6" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="1" uspid="0" p8:type="SequencePoint" ordinal="1" offset="1" sc="0" sl="6" ec="1" el="6" bec="0" bev="0" fileid="6" xmlns:p8="xsi" />
+            </Method>
+            <Method cyclomaticComplexity="1" nPathComplexity="1" sequenceCoverage="100" branchCoverage="100" isConstructor="False" isGetter="True" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="1" visitedSequencePoints="1" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken />
+              <Name>System.String LastRoom.Api.Models.Client::get_FullName()</Name>
+              <FileRef uid="6" />
+              <SequencePoints>
+                <SequencePoint vc="29" uspid="7" ordinal="0" sl="7" sc="1" el="7" ec="2" bec="0" bev="0" fileid="6" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="1" uspid="0" p8:type="SequencePoint" ordinal="2" offset="2" sc="0" sl="7" ec="1" el="7" bec="0" bev="0" fileid="6" xmlns:p8="xsi" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="46" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="2" />
+          <FullName>LastRoom.Api.Migrations.Initial</FullName>
+          <Methods>
+            <Method cyclomaticComplexity="1" nPathComplexity="1" sequenceCoverage="0" branchCoverage="100" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="40" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken />
+              <Name>System.Void LastRoom.Api.Migrations.Initial::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)</Name>
+              <FileRef uid="7" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="11" ordinal="0" sl="11" sc="1" el="11" ec="2" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="12" ordinal="1" sl="12" sc="1" el="12" ec="2" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="13" ordinal="2" sl="13" sc="1" el="13" ec="2" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="14" ordinal="3" sl="14" sc="1" el="14" ec="2" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="15" ordinal="4" sl="15" sc="1" el="15" ec="2" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="16" ordinal="5" sl="16" sc="1" el="16" ec="2" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="17" ordinal="6" sl="17" sc="1" el="17" ec="2" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="18" ordinal="7" sl="18" sc="1" el="18" ec="2" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="19" ordinal="8" sl="19" sc="1" el="19" ec="2" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="20" ordinal="9" sl="20" sc="1" el="20" ec="2" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="21" ordinal="10" sl="21" sc="1" el="21" ec="2" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="22" ordinal="11" sl="22" sc="1" el="22" ec="2" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="23" ordinal="12" sl="23" sc="1" el="23" ec="2" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="24" ordinal="13" sl="24" sc="1" el="24" ec="2" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="26" ordinal="14" sl="26" sc="1" el="26" ec="2" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="27" ordinal="15" sl="27" sc="1" el="27" ec="2" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="28" ordinal="16" sl="28" sc="1" el="28" ec="2" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="29" ordinal="17" sl="29" sc="1" el="29" ec="2" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="30" ordinal="18" sl="30" sc="1" el="30" ec="2" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="31" ordinal="19" sl="31" sc="1" el="31" ec="2" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="32" ordinal="20" sl="32" sc="1" el="32" ec="2" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="33" ordinal="21" sl="33" sc="1" el="33" ec="2" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="34" ordinal="22" sl="34" sc="1" el="34" ec="2" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="35" ordinal="23" sl="35" sc="1" el="35" ec="2" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="36" ordinal="24" sl="36" sc="1" el="36" ec="2" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="37" ordinal="25" sl="37" sc="1" el="37" ec="2" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="38" ordinal="26" sl="38" sc="1" el="38" ec="2" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="39" ordinal="27" sl="39" sc="1" el="39" ec="2" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="40" ordinal="28" sl="40" sc="1" el="40" ec="2" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="41" ordinal="29" sl="41" sc="1" el="41" ec="2" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="42" ordinal="30" sl="42" sc="1" el="42" ec="2" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="43" ordinal="31" sl="43" sc="1" el="43" ec="2" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="44" ordinal="32" sl="44" sc="1" el="44" ec="2" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="45" ordinal="33" sl="45" sc="1" el="45" ec="2" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="46" ordinal="34" sl="46" sc="1" el="46" ec="2" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="48" ordinal="35" sl="48" sc="1" el="48" ec="2" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="49" ordinal="36" sl="49" sc="1" el="49" ec="2" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="50" ordinal="37" sl="50" sc="1" el="50" ec="2" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="51" ordinal="38" sl="51" sc="1" el="51" ec="2" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="52" ordinal="39" sl="52" sc="1" el="52" ec="2" bec="0" bev="0" fileid="7" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="0" uspid="0" p8:type="SequencePoint" ordinal="0" offset="0" sc="0" sl="11" ec="1" el="52" bec="0" bev="0" fileid="7" xmlns:p8="xsi" />
+            </Method>
+            <Method cyclomaticComplexity="1" nPathComplexity="1" sequenceCoverage="0" branchCoverage="100" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="6" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken />
+              <Name>System.Void LastRoom.Api.Migrations.Initial::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)</Name>
+              <FileRef uid="7" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="55" ordinal="0" sl="55" sc="1" el="55" ec="2" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="56" ordinal="1" sl="56" sc="1" el="56" ec="2" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="57" ordinal="2" sl="57" sc="1" el="57" ec="2" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="59" ordinal="3" sl="59" sc="1" el="59" ec="2" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="60" ordinal="4" sl="60" sc="1" el="60" ec="2" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="61" ordinal="5" sl="61" sc="1" el="61" ec="2" bec="0" bev="0" fileid="7" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="0" uspid="0" p8:type="SequencePoint" ordinal="1" offset="1" sc="0" sl="55" ec="1" el="61" bec="0" bev="0" fileid="7" xmlns:p8="xsi" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="55" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" />
+          <FullName>LastRoom.Api.Migrations.Initial</FullName>
+          <Methods>
+            <Method cyclomaticComplexity="1" nPathComplexity="1" sequenceCoverage="0" branchCoverage="100" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="55" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken />
+              <Name>System.Void LastRoom.Api.Migrations.Initial::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)</Name>
+              <FileRef uid="8" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="18" ordinal="0" sl="18" sc="1" el="18" ec="2" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="20" ordinal="1" sl="20" sc="1" el="20" ec="2" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="22" ordinal="2" sl="22" sc="1" el="22" ec="2" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="23" ordinal="3" sl="23" sc="1" el="23" ec="2" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="24" ordinal="4" sl="24" sc="1" el="24" ec="2" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="25" ordinal="5" sl="25" sc="1" el="25" ec="2" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="26" ordinal="6" sl="26" sc="1" el="26" ec="2" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="27" ordinal="7" sl="27" sc="1" el="27" ec="2" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="28" ordinal="8" sl="28" sc="1" el="28" ec="2" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="29" ordinal="9" sl="29" sc="1" el="29" ec="2" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="30" ordinal="10" sl="30" sc="1" el="30" ec="2" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="31" ordinal="11" sl="31" sc="1" el="31" ec="2" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="32" ordinal="12" sl="32" sc="1" el="32" ec="2" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="33" ordinal="13" sl="33" sc="1" el="33" ec="2" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="34" ordinal="14" sl="34" sc="1" el="34" ec="2" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="35" ordinal="15" sl="35" sc="1" el="35" ec="2" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="36" ordinal="16" sl="36" sc="1" el="36" ec="2" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="37" ordinal="17" sl="37" sc="1" el="37" ec="2" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="38" ordinal="18" sl="38" sc="1" el="38" ec="2" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="39" ordinal="19" sl="39" sc="1" el="39" ec="2" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="40" ordinal="20" sl="40" sc="1" el="40" ec="2" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="41" ordinal="21" sl="41" sc="1" el="41" ec="2" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="42" ordinal="22" sl="42" sc="1" el="42" ec="2" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="43" ordinal="23" sl="43" sc="1" el="43" ec="2" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="44" ordinal="24" sl="44" sc="1" el="44" ec="2" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="45" ordinal="25" sl="45" sc="1" el="45" ec="2" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="47" ordinal="26" sl="47" sc="1" el="47" ec="2" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="48" ordinal="27" sl="48" sc="1" el="48" ec="2" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="49" ordinal="28" sl="49" sc="1" el="49" ec="2" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="50" ordinal="29" sl="50" sc="1" el="50" ec="2" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="51" ordinal="30" sl="51" sc="1" el="51" ec="2" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="52" ordinal="31" sl="52" sc="1" el="52" ec="2" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="53" ordinal="32" sl="53" sc="1" el="53" ec="2" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="54" ordinal="33" sl="54" sc="1" el="54" ec="2" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="55" ordinal="34" sl="55" sc="1" el="55" ec="2" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="56" ordinal="35" sl="56" sc="1" el="56" ec="2" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="57" ordinal="36" sl="57" sc="1" el="57" ec="2" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="58" ordinal="37" sl="58" sc="1" el="58" ec="2" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="59" ordinal="38" sl="59" sc="1" el="59" ec="2" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="60" ordinal="39" sl="60" sc="1" el="60" ec="2" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="61" ordinal="40" sl="61" sc="1" el="61" ec="2" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="62" ordinal="41" sl="62" sc="1" el="62" ec="2" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="63" ordinal="42" sl="63" sc="1" el="63" ec="2" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="64" ordinal="43" sl="64" sc="1" el="64" ec="2" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="66" ordinal="44" sl="66" sc="1" el="66" ec="2" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="67" ordinal="45" sl="67" sc="1" el="67" ec="2" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="68" ordinal="46" sl="68" sc="1" el="68" ec="2" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="69" ordinal="47" sl="69" sc="1" el="69" ec="2" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="70" ordinal="48" sl="70" sc="1" el="70" ec="2" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="71" ordinal="49" sl="71" sc="1" el="71" ec="2" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="72" ordinal="50" sl="72" sc="1" el="72" ec="2" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="73" ordinal="51" sl="73" sc="1" el="73" ec="2" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="74" ordinal="52" sl="74" sc="1" el="74" ec="2" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="75" ordinal="53" sl="75" sc="1" el="75" ec="2" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="77" ordinal="54" sl="77" sc="1" el="77" ec="2" bec="0" bev="0" fileid="8" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="0" uspid="0" p8:type="SequencePoint" ordinal="0" offset="0" sc="0" sl="18" ec="1" el="77" bec="0" bev="0" fileid="8" xmlns:p8="xsi" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="55" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" />
+          <FullName>LastRoom.Api.Migrations.LastRoomDbContextModelSnapshot</FullName>
+          <Methods>
+            <Method cyclomaticComplexity="1" nPathComplexity="1" sequenceCoverage="0" branchCoverage="100" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="55" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken />
+              <Name>System.Void LastRoom.Api.Migrations.LastRoomDbContextModelSnapshot::BuildModel(Microsoft.EntityFrameworkCore.ModelBuilder)</Name>
+              <FileRef uid="9" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="16" ordinal="0" sl="16" sc="1" el="16" ec="2" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="18" ordinal="1" sl="18" sc="1" el="18" ec="2" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="20" ordinal="2" sl="20" sc="1" el="20" ec="2" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="21" ordinal="3" sl="21" sc="1" el="21" ec="2" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="22" ordinal="4" sl="22" sc="1" el="22" ec="2" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="23" ordinal="5" sl="23" sc="1" el="23" ec="2" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="24" ordinal="6" sl="24" sc="1" el="24" ec="2" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="25" ordinal="7" sl="25" sc="1" el="25" ec="2" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="26" ordinal="8" sl="26" sc="1" el="26" ec="2" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="27" ordinal="9" sl="27" sc="1" el="27" ec="2" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="28" ordinal="10" sl="28" sc="1" el="28" ec="2" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="29" ordinal="11" sl="29" sc="1" el="29" ec="2" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="30" ordinal="12" sl="30" sc="1" el="30" ec="2" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="31" ordinal="13" sl="31" sc="1" el="31" ec="2" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="32" ordinal="14" sl="32" sc="1" el="32" ec="2" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="33" ordinal="15" sl="33" sc="1" el="33" ec="2" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="34" ordinal="16" sl="34" sc="1" el="34" ec="2" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="35" ordinal="17" sl="35" sc="1" el="35" ec="2" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="36" ordinal="18" sl="36" sc="1" el="36" ec="2" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="37" ordinal="19" sl="37" sc="1" el="37" ec="2" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="38" ordinal="20" sl="38" sc="1" el="38" ec="2" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="39" ordinal="21" sl="39" sc="1" el="39" ec="2" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="40" ordinal="22" sl="40" sc="1" el="40" ec="2" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="41" ordinal="23" sl="41" sc="1" el="41" ec="2" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="42" ordinal="24" sl="42" sc="1" el="42" ec="2" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="43" ordinal="25" sl="43" sc="1" el="43" ec="2" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="45" ordinal="26" sl="45" sc="1" el="45" ec="2" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="46" ordinal="27" sl="46" sc="1" el="46" ec="2" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="47" ordinal="28" sl="47" sc="1" el="47" ec="2" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="48" ordinal="29" sl="48" sc="1" el="48" ec="2" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="49" ordinal="30" sl="49" sc="1" el="49" ec="2" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="50" ordinal="31" sl="50" sc="1" el="50" ec="2" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="51" ordinal="32" sl="51" sc="1" el="51" ec="2" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="52" ordinal="33" sl="52" sc="1" el="52" ec="2" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="53" ordinal="34" sl="53" sc="1" el="53" ec="2" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="54" ordinal="35" sl="54" sc="1" el="54" ec="2" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="55" ordinal="36" sl="55" sc="1" el="55" ec="2" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="56" ordinal="37" sl="56" sc="1" el="56" ec="2" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="57" ordinal="38" sl="57" sc="1" el="57" ec="2" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="58" ordinal="39" sl="58" sc="1" el="58" ec="2" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="59" ordinal="40" sl="59" sc="1" el="59" ec="2" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="60" ordinal="41" sl="60" sc="1" el="60" ec="2" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="61" ordinal="42" sl="61" sc="1" el="61" ec="2" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="62" ordinal="43" sl="62" sc="1" el="62" ec="2" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="64" ordinal="44" sl="64" sc="1" el="64" ec="2" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="65" ordinal="45" sl="65" sc="1" el="65" ec="2" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="66" ordinal="46" sl="66" sc="1" el="66" ec="2" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="67" ordinal="47" sl="67" sc="1" el="67" ec="2" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="68" ordinal="48" sl="68" sc="1" el="68" ec="2" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="69" ordinal="49" sl="69" sc="1" el="69" ec="2" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="70" ordinal="50" sl="70" sc="1" el="70" ec="2" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="71" ordinal="51" sl="71" sc="1" el="71" ec="2" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="72" ordinal="52" sl="72" sc="1" el="72" ec="2" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="73" ordinal="53" sl="73" sc="1" el="73" ec="2" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="75" ordinal="54" sl="75" sc="1" el="75" ec="2" bec="0" bev="0" fileid="9" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="0" uspid="0" p8:type="SequencePoint" ordinal="0" offset="0" sc="0" sl="16" ec="1" el="75" bec="0" bev="0" fileid="9" xmlns:p8="xsi" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="5" visitedSequencePoints="5" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="1" numClasses="1" visitedMethods="1" numMethods="1" />
+          <FullName>LastRoom.Api.Errors.Booking.BookingDateTooFarError</FullName>
+          <Methods>
+            <Method cyclomaticComplexity="1" nPathComplexity="1" sequenceCoverage="100" branchCoverage="100" isConstructor="True" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="5" visitedSequencePoints="5" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken />
+              <Name>System.Void LastRoom.Api.Errors.Booking.BookingDateTooFarError::.ctor()</Name>
+              <FileRef uid="10" />
+              <SequencePoints>
+                <SequencePoint vc="1" uspid="8" ordinal="0" sl="8" sc="1" el="8" ec="2" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="1" uspid="9" ordinal="1" sl="9" sc="1" el="9" ec="2" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="1" uspid="10" ordinal="2" sl="10" sc="1" el="10" ec="2" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="1" uspid="11" ordinal="3" sl="11" sc="1" el="11" ec="2" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="1" uspid="12" ordinal="4" sl="12" sc="1" el="12" ec="2" bec="0" bev="0" fileid="10" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="5" uspid="0" p8:type="SequencePoint" ordinal="0" offset="0" sc="0" sl="8" ec="1" el="12" bec="0" bev="0" fileid="10" xmlns:p8="xsi" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="5" visitedSequencePoints="5" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="1" numClasses="1" visitedMethods="1" numMethods="1" />
+          <FullName>LastRoom.Api.Errors.Booking.BookingNotFoundError</FullName>
+          <Methods>
+            <Method cyclomaticComplexity="1" nPathComplexity="1" sequenceCoverage="100" branchCoverage="100" isConstructor="True" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="5" visitedSequencePoints="5" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken />
+              <Name>System.Void LastRoom.Api.Errors.Booking.BookingNotFoundError::.ctor()</Name>
+              <FileRef uid="11" />
+              <SequencePoints>
+                <SequencePoint vc="3" uspid="8" ordinal="0" sl="8" sc="1" el="8" ec="2" bec="0" bev="0" fileid="11" />
+                <SequencePoint vc="3" uspid="9" ordinal="1" sl="9" sc="1" el="9" ec="2" bec="0" bev="0" fileid="11" />
+                <SequencePoint vc="3" uspid="10" ordinal="2" sl="10" sc="1" el="10" ec="2" bec="0" bev="0" fileid="11" />
+                <SequencePoint vc="3" uspid="11" ordinal="3" sl="11" sc="1" el="11" ec="2" bec="0" bev="0" fileid="11" />
+                <SequencePoint vc="3" uspid="12" ordinal="4" sl="12" sc="1" el="12" ec="2" bec="0" bev="0" fileid="11" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="5" uspid="0" p8:type="SequencePoint" ordinal="0" offset="0" sc="0" sl="8" ec="1" el="12" bec="0" bev="0" fileid="11" xmlns:p8="xsi" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="5" visitedSequencePoints="5" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="1" numClasses="1" visitedMethods="1" numMethods="1" />
+          <FullName>LastRoom.Api.Errors.Booking.CheckOutBeforeCheckInError</FullName>
+          <Methods>
+            <Method cyclomaticComplexity="1" nPathComplexity="1" sequenceCoverage="100" branchCoverage="100" isConstructor="True" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="5" visitedSequencePoints="5" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken />
+              <Name>System.Void LastRoom.Api.Errors.Booking.CheckOutBeforeCheckInError::.ctor()</Name>
+              <FileRef uid="12" />
+              <SequencePoints>
+                <SequencePoint vc="2" uspid="8" ordinal="0" sl="8" sc="1" el="8" ec="2" bec="0" bev="0" fileid="12" />
+                <SequencePoint vc="2" uspid="9" ordinal="1" sl="9" sc="1" el="9" ec="2" bec="0" bev="0" fileid="12" />
+                <SequencePoint vc="2" uspid="10" ordinal="2" sl="10" sc="1" el="10" ec="2" bec="0" bev="0" fileid="12" />
+                <SequencePoint vc="2" uspid="11" ordinal="3" sl="11" sc="1" el="11" ec="2" bec="0" bev="0" fileid="12" />
+                <SequencePoint vc="2" uspid="12" ordinal="4" sl="12" sc="1" el="12" ec="2" bec="0" bev="0" fileid="12" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="5" uspid="0" p8:type="SequencePoint" ordinal="0" offset="0" sc="0" sl="8" ec="1" el="12" bec="0" bev="0" fileid="12" xmlns:p8="xsi" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="5" visitedSequencePoints="5" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="1" numClasses="1" visitedMethods="1" numMethods="1" />
+          <FullName>LastRoom.Api.Errors.Booking.RoomAlreadyBookedError</FullName>
+          <Methods>
+            <Method cyclomaticComplexity="1" nPathComplexity="1" sequenceCoverage="100" branchCoverage="100" isConstructor="True" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="5" visitedSequencePoints="5" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken />
+              <Name>System.Void LastRoom.Api.Errors.Booking.RoomAlreadyBookedError::.ctor()</Name>
+              <FileRef uid="13" />
+              <SequencePoints>
+                <SequencePoint vc="2" uspid="8" ordinal="0" sl="8" sc="1" el="8" ec="2" bec="0" bev="0" fileid="13" />
+                <SequencePoint vc="2" uspid="9" ordinal="1" sl="9" sc="1" el="9" ec="2" bec="0" bev="0" fileid="13" />
+                <SequencePoint vc="2" uspid="10" ordinal="2" sl="10" sc="1" el="10" ec="2" bec="0" bev="0" fileid="13" />
+                <SequencePoint vc="2" uspid="11" ordinal="3" sl="11" sc="1" el="11" ec="2" bec="0" bev="0" fileid="13" />
+                <SequencePoint vc="2" uspid="12" ordinal="4" sl="12" sc="1" el="12" ec="2" bec="0" bev="0" fileid="13" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="5" uspid="0" p8:type="SequencePoint" ordinal="0" offset="0" sc="0" sl="8" ec="1" el="12" bec="0" bev="0" fileid="13" xmlns:p8="xsi" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="5" visitedSequencePoints="5" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="1" numClasses="1" visitedMethods="1" numMethods="1" />
+          <FullName>LastRoom.Api.Errors.Booking.StartDateNotAllowedError</FullName>
+          <Methods>
+            <Method cyclomaticComplexity="1" nPathComplexity="1" sequenceCoverage="100" branchCoverage="100" isConstructor="True" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="5" visitedSequencePoints="5" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken />
+              <Name>System.Void LastRoom.Api.Errors.Booking.StartDateNotAllowedError::.ctor()</Name>
+              <FileRef uid="14" />
+              <SequencePoints>
+                <SequencePoint vc="1" uspid="8" ordinal="0" sl="8" sc="1" el="8" ec="2" bec="0" bev="0" fileid="14" />
+                <SequencePoint vc="1" uspid="9" ordinal="1" sl="9" sc="1" el="9" ec="2" bec="0" bev="0" fileid="14" />
+                <SequencePoint vc="1" uspid="10" ordinal="2" sl="10" sc="1" el="10" ec="2" bec="0" bev="0" fileid="14" />
+                <SequencePoint vc="1" uspid="11" ordinal="3" sl="11" sc="1" el="11" ec="2" bec="0" bev="0" fileid="14" />
+                <SequencePoint vc="1" uspid="12" ordinal="4" sl="12" sc="1" el="12" ec="2" bec="0" bev="0" fileid="14" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="5" uspid="0" p8:type="SequencePoint" ordinal="0" offset="0" sc="0" sl="8" ec="1" el="12" bec="0" bev="0" fileid="14" xmlns:p8="xsi" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="5" visitedSequencePoints="5" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="1" numClasses="1" visitedMethods="1" numMethods="1" />
+          <FullName>LastRoom.Api.Errors.Booking.StayPeriodTooLongError</FullName>
+          <Methods>
+            <Method cyclomaticComplexity="1" nPathComplexity="1" sequenceCoverage="100" branchCoverage="100" isConstructor="True" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="5" visitedSequencePoints="5" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken />
+              <Name>System.Void LastRoom.Api.Errors.Booking.StayPeriodTooLongError::.ctor()</Name>
+              <FileRef uid="15" />
+              <SequencePoints>
+                <SequencePoint vc="1" uspid="8" ordinal="0" sl="8" sc="1" el="8" ec="2" bec="0" bev="0" fileid="15" />
+                <SequencePoint vc="1" uspid="9" ordinal="1" sl="9" sc="1" el="9" ec="2" bec="0" bev="0" fileid="15" />
+                <SequencePoint vc="1" uspid="10" ordinal="2" sl="10" sc="1" el="10" ec="2" bec="0" bev="0" fileid="15" />
+                <SequencePoint vc="1" uspid="11" ordinal="3" sl="11" sc="1" el="11" ec="2" bec="0" bev="0" fileid="15" />
+                <SequencePoint vc="1" uspid="12" ordinal="4" sl="12" sc="1" el="12" ec="2" bec="0" bev="0" fileid="15" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="5" uspid="0" p8:type="SequencePoint" ordinal="0" offset="0" sc="0" sl="8" ec="1" el="12" bec="0" bev="0" fileid="15" xmlns:p8="xsi" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="4" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="4" />
+          <FullName>LastRoom.Api.DTOs.BookingRequest</FullName>
+          <Methods>
+            <Method cyclomaticComplexity="1" nPathComplexity="1" sequenceCoverage="0" branchCoverage="100" isConstructor="False" isGetter="True" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken />
+              <Name>System.String LastRoom.Api.DTOs.BookingRequest::get_ClientIdentification()</Name>
+              <FileRef uid="16" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="8" ordinal="0" sl="8" sc="1" el="8" ec="2" bec="0" bev="0" fileid="16" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="0" uspid="0" p8:type="SequencePoint" ordinal="0" offset="0" sc="0" sl="8" ec="1" el="8" bec="0" bev="0" fileid="16" xmlns:p8="xsi" />
+            </Method>
+            <Method cyclomaticComplexity="1" nPathComplexity="1" sequenceCoverage="0" branchCoverage="100" isConstructor="False" isGetter="True" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken />
+              <Name>System.String LastRoom.Api.DTOs.BookingRequest::get_ClientFullName()</Name>
+              <FileRef uid="16" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="9" ordinal="0" sl="9" sc="1" el="9" ec="2" bec="0" bev="0" fileid="16" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="0" uspid="0" p8:type="SequencePoint" ordinal="1" offset="1" sc="0" sl="9" ec="1" el="9" bec="0" bev="0" fileid="16" xmlns:p8="xsi" />
+            </Method>
+            <Method cyclomaticComplexity="1" nPathComplexity="1" sequenceCoverage="0" branchCoverage="100" isConstructor="False" isGetter="True" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken />
+              <Name>System.DateOnly LastRoom.Api.DTOs.BookingRequest::get_CheckInDate()</Name>
+              <FileRef uid="16" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="11" ordinal="0" sl="11" sc="1" el="11" ec="2" bec="0" bev="0" fileid="16" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="0" uspid="0" p8:type="SequencePoint" ordinal="2" offset="2" sc="0" sl="11" ec="1" el="11" bec="0" bev="0" fileid="16" xmlns:p8="xsi" />
+            </Method>
+            <Method cyclomaticComplexity="1" nPathComplexity="1" sequenceCoverage="0" branchCoverage="100" isConstructor="False" isGetter="True" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken />
+              <Name>System.DateOnly LastRoom.Api.DTOs.BookingRequest::get_CheckOutDate()</Name>
+              <FileRef uid="16" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="13" ordinal="0" sl="13" sc="1" el="13" ec="2" bec="0" bev="0" fileid="16" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="0" uspid="0" p8:type="SequencePoint" ordinal="3" offset="3" sc="0" sl="13" ec="1" el="13" bec="0" bev="0" fileid="16" xmlns:p8="xsi" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="4" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="4" />
+          <FullName>LastRoom.Api.DTOs.BookingResponse</FullName>
+          <Methods>
+            <Method cyclomaticComplexity="1" nPathComplexity="1" sequenceCoverage="0" branchCoverage="100" isConstructor="False" isGetter="True" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken />
+              <Name>System.Guid LastRoom.Api.DTOs.BookingResponse::get_Ticket()</Name>
+              <FileRef uid="17" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="8" ordinal="0" sl="8" sc="1" el="8" ec="2" bec="0" bev="0" fileid="17" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="0" uspid="0" p8:type="SequencePoint" ordinal="0" offset="0" sc="0" sl="8" ec="1" el="8" bec="0" bev="0" fileid="17" xmlns:p8="xsi" />
+            </Method>
+            <Method cyclomaticComplexity="1" nPathComplexity="1" sequenceCoverage="0" branchCoverage="100" isConstructor="False" isGetter="True" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken />
+              <Name>System.String LastRoom.Api.DTOs.BookingResponse::get_ClientFullName()</Name>
+              <FileRef uid="17" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="9" ordinal="0" sl="9" sc="1" el="9" ec="2" bec="0" bev="0" fileid="17" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="0" uspid="0" p8:type="SequencePoint" ordinal="1" offset="1" sc="0" sl="9" ec="1" el="9" bec="0" bev="0" fileid="17" xmlns:p8="xsi" />
+            </Method>
+            <Method cyclomaticComplexity="1" nPathComplexity="1" sequenceCoverage="0" branchCoverage="100" isConstructor="False" isGetter="True" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken />
+              <Name>System.DateOnly LastRoom.Api.DTOs.BookingResponse::get_CheckInDate()</Name>
+              <FileRef uid="17" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="11" ordinal="0" sl="11" sc="1" el="11" ec="2" bec="0" bev="0" fileid="17" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="0" uspid="0" p8:type="SequencePoint" ordinal="2" offset="2" sc="0" sl="11" ec="1" el="11" bec="0" bev="0" fileid="17" xmlns:p8="xsi" />
+            </Method>
+            <Method cyclomaticComplexity="1" nPathComplexity="1" sequenceCoverage="0" branchCoverage="100" isConstructor="False" isGetter="True" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken />
+              <Name>System.DateOnly LastRoom.Api.DTOs.BookingResponse::get_CheckOutDate()</Name>
+              <FileRef uid="17" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="13" ordinal="0" sl="13" sc="1" el="13" ec="2" bec="0" bev="0" fileid="17" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="0" uspid="0" p8:type="SequencePoint" ordinal="3" offset="3" sc="0" sl="13" ec="1" el="13" bec="0" bev="0" fileid="17" xmlns:p8="xsi" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="2" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="2" />
+          <FullName>LastRoom.Api.DTOs.BookingDaysResponse</FullName>
+          <Methods>
+            <Method cyclomaticComplexity="1" nPathComplexity="1" sequenceCoverage="0" branchCoverage="100" isConstructor="False" isGetter="True" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken />
+              <Name>System.Boolean LastRoom.Api.DTOs.BookingDaysResponse::get_Vacant()</Name>
+              <FileRef uid="18" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="8" ordinal="0" sl="8" sc="1" el="8" ec="2" bec="0" bev="0" fileid="18" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="0" uspid="0" p8:type="SequencePoint" ordinal="0" offset="0" sc="0" sl="8" ec="1" el="8" bec="0" bev="0" fileid="18" xmlns:p8="xsi" />
+            </Method>
+            <Method cyclomaticComplexity="1" nPathComplexity="1" sequenceCoverage="0" branchCoverage="100" isConstructor="False" isGetter="True" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken />
+              <Name>System.DateOnly LastRoom.Api.DTOs.BookingDaysResponse::get_Date()</Name>
+              <FileRef uid="18" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="10" ordinal="0" sl="10" sc="1" el="10" ec="2" bec="0" bev="0" fileid="18" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="0" uspid="0" p8:type="SequencePoint" ordinal="1" offset="1" sc="0" sl="10" ec="1" el="10" bec="0" bev="0" fileid="18" xmlns:p8="xsi" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="6" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="2" />
+          <FullName>LastRoom.Api.Converters.DateOnlyJsonConverter</FullName>
+          <Methods>
+            <Method cyclomaticComplexity="1" nPathComplexity="1" sequenceCoverage="0" branchCoverage="100" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="3" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken />
+              <Name>System.DateOnly LastRoom.Api.Converters.DateOnlyJsonConverter::Read(System.Text.Json.Utf8JsonReader&amp;,System.Type,System.Text.Json.JsonSerializerOptions)</Name>
+              <FileRef uid="19" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="12" ordinal="0" sl="12" sc="1" el="12" ec="2" bec="0" bev="0" fileid="19" />
+                <SequencePoint vc="0" uspid="13" ordinal="1" sl="13" sc="1" el="13" ec="2" bec="0" bev="0" fileid="19" />
+                <SequencePoint vc="0" uspid="14" ordinal="2" sl="14" sc="1" el="14" ec="2" bec="0" bev="0" fileid="19" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="0" uspid="0" p8:type="SequencePoint" ordinal="0" offset="0" sc="0" sl="12" ec="1" el="14" bec="0" bev="0" fileid="19" xmlns:p8="xsi" />
+            </Method>
+            <Method cyclomaticComplexity="1" nPathComplexity="1" sequenceCoverage="0" branchCoverage="100" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="3" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken />
+              <Name>System.Void LastRoom.Api.Converters.DateOnlyJsonConverter::Write(System.Text.Json.Utf8JsonWriter,System.DateOnly,System.Text.Json.JsonSerializerOptions)</Name>
+              <FileRef uid="19" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="17" ordinal="0" sl="17" sc="1" el="17" ec="2" bec="0" bev="0" fileid="19" />
+                <SequencePoint vc="0" uspid="18" ordinal="1" sl="18" sc="1" el="18" ec="2" bec="0" bev="0" fileid="19" />
+                <SequencePoint vc="0" uspid="19" ordinal="2" sl="19" sc="1" el="19" ec="2" bec="0" bev="0" fileid="19" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="0" uspid="0" p8:type="SequencePoint" ordinal="1" offset="1" sc="0" sl="17" ec="1" el="19" bec="0" bev="0" fileid="19" xmlns:p8="xsi" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="28" visitedSequencePoints="0" numBranchPoints="10" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="6" minCyclomaticComplexity="4" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="2" />
+          <FullName>LastRoom.Api.Controllers.ApiController</FullName>
+          <Methods>
+            <Method cyclomaticComplexity="6" nPathComplexity="6" sequenceCoverage="0" branchCoverage="0" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="14" visitedSequencePoints="0" numBranchPoints="6" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="6" minCyclomaticComplexity="6" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken />
+              <Name>Microsoft.AspNetCore.Mvc.ActionResult LastRoom.Api.Controllers.ApiController::Problem(System.Collections.Generic.List`1&lt;FluentResults.IError&gt;)</Name>
+              <FileRef uid="20" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="12" ordinal="0" sl="12" sc="1" el="12" ec="2" bec="0" bev="0" fileid="20" />
+                <SequencePoint vc="0" uspid="13" ordinal="1" sl="13" sc="1" el="13" ec="2" bec="2" bev="0" fileid="20" />
+                <SequencePoint vc="0" uspid="14" ordinal="2" sl="14" sc="1" el="14" ec="2" bec="0" bev="0" fileid="20" />
+                <SequencePoint vc="0" uspid="15" ordinal="3" sl="15" sc="1" el="15" ec="2" bec="0" bev="0" fileid="20" />
+                <SequencePoint vc="0" uspid="18" ordinal="4" sl="18" sc="1" el="18" ec="2" bec="0" bev="0" fileid="20" />
+                <SequencePoint vc="0" uspid="20" ordinal="5" sl="20" sc="1" el="20" ec="2" bec="2" bev="0" fileid="20" />
+                <SequencePoint vc="0" uspid="21" ordinal="6" sl="21" sc="1" el="21" ec="2" bec="0" bev="0" fileid="20" />
+                <SequencePoint vc="0" uspid="22" ordinal="7" sl="22" sc="1" el="22" ec="2" bec="0" bev="0" fileid="20" />
+                <SequencePoint vc="0" uspid="23" ordinal="8" sl="23" sc="1" el="23" ec="2" bec="2" bev="0" fileid="20" />
+                <SequencePoint vc="0" uspid="24" ordinal="9" sl="24" sc="1" el="24" ec="2" bec="0" bev="0" fileid="20" />
+                <SequencePoint vc="0" uspid="26" ordinal="10" sl="26" sc="1" el="26" ec="2" bec="0" bev="0" fileid="20" />
+                <SequencePoint vc="0" uspid="27" ordinal="11" sl="27" sc="1" el="27" ec="2" bec="0" bev="0" fileid="20" />
+                <SequencePoint vc="0" uspid="29" ordinal="12" sl="29" sc="1" el="29" ec="2" bec="0" bev="0" fileid="20" />
+                <SequencePoint vc="0" uspid="30" ordinal="13" sl="30" sc="1" el="30" ec="2" bec="0" bev="0" fileid="20" />
+              </SequencePoints>
+              <BranchPoints>
+                <BranchPoint vc="0" uspid="13" ordinal="0" path="0" offset="12" offsetend="14" sl="13" fileid="20" />
+                <BranchPoint vc="0" uspid="13" ordinal="1" path="1" offset="12" offsetend="42" sl="13" fileid="20" />
+                <BranchPoint vc="0" uspid="20" ordinal="5" path="1" offset="126" offsetend="59" sl="20" fileid="20" />
+                <BranchPoint vc="0" uspid="23" ordinal="2" path="0" offset="97" offsetend="99" sl="23" fileid="20" />
+                <BranchPoint vc="0" uspid="23" ordinal="3" path="1" offset="97" offsetend="105" sl="23" fileid="20" />
+                <BranchPoint vc="0" uspid="20" ordinal="4" path="0" offset="126" offsetend="128" sl="20" fileid="20" />
+              </BranchPoints>
+              <MethodPoint vc="0" uspid="0" p8:type="SequencePoint" ordinal="0" offset="0" sc="0" sl="12" ec="1" el="30" bec="0" bev="0" fileid="20" xmlns:p8="xsi" />
+            </Method>
+            <Method cyclomaticComplexity="4" nPathComplexity="4" sequenceCoverage="0" branchCoverage="0" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="14" visitedSequencePoints="0" numBranchPoints="4" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="4" minCyclomaticComplexity="4" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken />
+              <Name>Microsoft.AspNetCore.Mvc.ActionResult LastRoom.Api.Controllers.ApiController::Problems(Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary,LastRoom.Api.Errors.ErrorType,System.String)</Name>
+              <FileRef uid="20" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="33" ordinal="0" sl="33" sc="1" el="33" ec="2" bec="0" bev="0" fileid="20" />
+                <SequencePoint vc="0" uspid="34" ordinal="1" sl="34" sc="1" el="34" ec="2" bec="4" bev="0" fileid="20" />
+                <SequencePoint vc="0" uspid="35" ordinal="2" sl="35" sc="1" el="35" ec="2" bec="0" bev="0" fileid="20" />
+                <SequencePoint vc="0" uspid="36" ordinal="3" sl="36" sc="1" el="36" ec="2" bec="0" bev="0" fileid="20" />
+                <SequencePoint vc="0" uspid="37" ordinal="4" sl="37" sc="1" el="37" ec="2" bec="0" bev="0" fileid="20" />
+                <SequencePoint vc="0" uspid="38" ordinal="5" sl="38" sc="1" el="38" ec="2" bec="0" bev="0" fileid="20" />
+                <SequencePoint vc="0" uspid="39" ordinal="6" sl="39" sc="1" el="39" ec="2" bec="0" bev="0" fileid="20" />
+                <SequencePoint vc="0" uspid="40" ordinal="7" sl="40" sc="1" el="40" ec="2" bec="0" bev="0" fileid="20" />
+                <SequencePoint vc="0" uspid="42" ordinal="8" sl="42" sc="1" el="42" ec="2" bec="0" bev="0" fileid="20" />
+                <SequencePoint vc="0" uspid="43" ordinal="9" sl="43" sc="1" el="43" ec="2" bec="0" bev="0" fileid="20" />
+                <SequencePoint vc="0" uspid="44" ordinal="10" sl="44" sc="1" el="44" ec="2" bec="0" bev="0" fileid="20" />
+                <SequencePoint vc="0" uspid="45" ordinal="11" sl="45" sc="1" el="45" ec="2" bec="0" bev="0" fileid="20" />
+                <SequencePoint vc="0" uspid="46" ordinal="12" sl="46" sc="1" el="46" ec="2" bec="0" bev="0" fileid="20" />
+                <SequencePoint vc="0" uspid="47" ordinal="13" sl="47" sc="1" el="47" ec="2" bec="0" bev="0" fileid="20" />
+              </SequencePoints>
+              <BranchPoints>
+                <BranchPoint vc="0" uspid="34" ordinal="1" path="1" offset="6" offsetend="25" sl="34" fileid="20" />
+                <BranchPoint vc="0" uspid="34" ordinal="2" path="2" offset="6" offsetend="33" sl="34" fileid="20" />
+                <BranchPoint vc="0" uspid="34" ordinal="3" path="3" offset="6" offsetend="41" sl="34" fileid="20" />
+                <BranchPoint vc="0" uspid="34" ordinal="0" path="0" offset="6" offsetend="49" sl="34" fileid="20" />
+              </BranchPoints>
+              <MethodPoint vc="0" uspid="0" p8:type="SequencePoint" ordinal="1" offset="1" sc="0" sl="33" ec="1" el="47" bec="0" bev="0" fileid="20" xmlns:p8="xsi" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="29" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="4" />
+          <FullName>LastRoom.Api.Controllers.BookingsController</FullName>
+          <Methods>
+            <Method cyclomaticComplexity="1" nPathComplexity="1" sequenceCoverage="0" branchCoverage="100" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="11" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken />
+              <Name>LastRoom.Api.Models.Booking LastRoom.Api.Controllers.BookingsController::MapBookingRequestToBooking(System.Guid,LastRoom.Api.DTOs.BookingRequest)</Name>
+              <FileRef uid="21" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="86" ordinal="0" sl="86" sc="1" el="86" ec="2" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="0" uspid="87" ordinal="1" sl="87" sc="1" el="87" ec="2" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="0" uspid="88" ordinal="2" sl="88" sc="1" el="88" ec="2" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="0" uspid="89" ordinal="3" sl="89" sc="1" el="89" ec="2" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="0" uspid="90" ordinal="4" sl="90" sc="1" el="90" ec="2" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="0" uspid="91" ordinal="5" sl="91" sc="1" el="91" ec="2" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="0" uspid="92" ordinal="6" sl="92" sc="1" el="92" ec="2" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="0" uspid="93" ordinal="7" sl="93" sc="1" el="93" ec="2" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="0" uspid="94" ordinal="8" sl="94" sc="1" el="94" ec="2" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="0" uspid="95" ordinal="9" sl="95" sc="1" el="95" ec="2" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="0" uspid="96" ordinal="10" sl="96" sc="1" el="96" ec="2" bec="0" bev="0" fileid="21" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="0" uspid="0" p8:type="SequencePoint" ordinal="0" offset="0" sc="0" sl="86" ec="1" el="96" bec="0" bev="0" fileid="21" xmlns:p8="xsi" />
+            </Method>
+            <Method cyclomaticComplexity="1" nPathComplexity="1" sequenceCoverage="0" branchCoverage="100" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="7" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken />
+              <Name>LastRoom.Api.DTOs.BookingResponse LastRoom.Api.Controllers.BookingsController::MapBookingToBookingResponse(LastRoom.Api.Models.Booking)</Name>
+              <FileRef uid="21" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="99" ordinal="0" sl="99" sc="1" el="99" ec="2" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="0" uspid="100" ordinal="1" sl="100" sc="1" el="100" ec="2" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="0" uspid="101" ordinal="2" sl="101" sc="1" el="101" ec="2" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="0" uspid="102" ordinal="3" sl="102" sc="1" el="102" ec="2" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="0" uspid="103" ordinal="4" sl="103" sc="1" el="103" ec="2" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="0" uspid="104" ordinal="5" sl="104" sc="1" el="104" ec="2" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="0" uspid="105" ordinal="6" sl="105" sc="1" el="105" ec="2" bec="0" bev="0" fileid="21" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="0" uspid="0" p8:type="SequencePoint" ordinal="1" offset="1" sc="0" sl="99" ec="1" el="105" bec="0" bev="0" fileid="21" xmlns:p8="xsi" />
+            </Method>
+            <Method cyclomaticComplexity="1" nPathComplexity="1" sequenceCoverage="0" branchCoverage="100" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="7" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken />
+              <Name>System.Collections.Generic.List`1&lt;LastRoom.Api.DTOs.BookingDaysResponse&gt; LastRoom.Api.Controllers.BookingsController::MapDictOfDateToListOfBookingDaysResponse(System.Collections.Generic.Dictionary`2&lt;System.DateOnly,System.Boolean&gt;)</Name>
+              <FileRef uid="21" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="108" ordinal="0" sl="108" sc="1" el="108" ec="2" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="0" uspid="109" ordinal="1" sl="109" sc="1" el="109" ec="2" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="0" uspid="110" ordinal="2" sl="110" sc="1" el="110" ec="2" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="0" uspid="111" ordinal="3" sl="111" sc="1" el="111" ec="2" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="0" uspid="112" ordinal="4" sl="112" sc="1" el="112" ec="2" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="0" uspid="113" ordinal="5" sl="113" sc="1" el="113" ec="2" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="0" uspid="114" ordinal="6" sl="114" sc="1" el="114" ec="2" bec="0" bev="0" fileid="21" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="0" uspid="0" p8:type="SequencePoint" ordinal="2" offset="2" sc="0" sl="108" ec="1" el="114" bec="0" bev="0" fileid="21" xmlns:p8="xsi" />
+            </Method>
+            <Method cyclomaticComplexity="1" nPathComplexity="1" sequenceCoverage="0" branchCoverage="100" isConstructor="True" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="4" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken />
+              <Name>System.Void LastRoom.Api.Controllers.BookingsController::.ctor(LastRoom.Api.Services.Interfaces.IBookingService)</Name>
+              <FileRef uid="21" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="15" ordinal="0" sl="15" sc="1" el="15" ec="2" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="0" uspid="16" ordinal="1" sl="16" sc="1" el="16" ec="2" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="0" uspid="17" ordinal="2" sl="17" sc="1" el="17" ec="2" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="0" uspid="18" ordinal="3" sl="18" sc="1" el="18" ec="2" bec="0" bev="0" fileid="21" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="0" uspid="0" p8:type="SequencePoint" ordinal="3" offset="3" sc="0" sl="15" ec="1" el="18" bec="0" bev="0" fileid="21" xmlns:p8="xsi" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="5" visitedSequencePoints="0" numBranchPoints="2" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="2" minCyclomaticComplexity="2" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" />
+          <FullName>LastRoom.Api.Controllers.BookingsController/&lt;Delete&gt;d__6</FullName>
+          <Methods>
+            <Method cyclomaticComplexity="2" nPathComplexity="2" sequenceCoverage="0" branchCoverage="0" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="5" visitedSequencePoints="0" numBranchPoints="2" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="2" minCyclomaticComplexity="2" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken />
+              <Name>System.Void LastRoom.Api.Controllers.BookingsController/&lt;Delete&gt;d__6::MoveNext()</Name>
+              <FileRef uid="21" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="77" ordinal="0" sl="77" sc="1" el="77" ec="2" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="0" uspid="78" ordinal="1" sl="78" sc="1" el="78" ec="2" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="0" uspid="80" ordinal="2" sl="80" sc="1" el="80" ec="2" bec="2" bev="0" fileid="21" />
+                <SequencePoint vc="0" uspid="82" ordinal="3" sl="82" sc="1" el="82" ec="2" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="0" uspid="83" ordinal="4" sl="83" sc="1" el="83" ec="2" bec="0" bev="0" fileid="21" />
+              </SequencePoints>
+              <BranchPoints>
+                <BranchPoint vc="0" uspid="80" ordinal="0" path="0" offset="166" offsetend="168" sl="80" fileid="21" />
+                <BranchPoint vc="0" uspid="80" ordinal="1" path="1" offset="166" offsetend="193" sl="80" fileid="21" />
+              </BranchPoints>
+              <MethodPoint vc="0" uspid="0" p8:type="SequencePoint" ordinal="0" offset="0" sc="0" sl="77" ec="1" el="83" bec="0" bev="0" fileid="21" xmlns:p8="xsi" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="8" visitedSequencePoints="0" numBranchPoints="2" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="2" minCyclomaticComplexity="2" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" />
+          <FullName>LastRoom.Api.Controllers.BookingsController/&lt;Get&gt;d__2</FullName>
+          <Methods>
+            <Method cyclomaticComplexity="2" nPathComplexity="2" sequenceCoverage="0" branchCoverage="0" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="8" visitedSequencePoints="0" numBranchPoints="2" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="2" minCyclomaticComplexity="2" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken />
+              <Name>System.Void LastRoom.Api.Controllers.BookingsController/&lt;Get&gt;d__2::MoveNext()</Name>
+              <FileRef uid="21" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="22" ordinal="0" sl="22" sc="1" el="22" ec="2" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="0" uspid="23" ordinal="1" sl="23" sc="1" el="23" ec="2" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="0" uspid="25" ordinal="2" sl="25" sc="1" el="25" ec="2" bec="2" bev="0" fileid="21" />
+                <SequencePoint vc="0" uspid="26" ordinal="3" sl="26" sc="1" el="26" ec="2" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="0" uspid="27" ordinal="4" sl="27" sc="1" el="27" ec="2" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="0" uspid="30" ordinal="5" sl="30" sc="1" el="30" ec="2" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="0" uspid="32" ordinal="6" sl="32" sc="1" el="32" ec="2" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="0" uspid="33" ordinal="7" sl="33" sc="1" el="33" ec="2" bec="0" bev="0" fileid="21" />
+              </SequencePoints>
+              <BranchPoints>
+                <BranchPoint vc="0" uspid="25" ordinal="0" path="0" offset="166" offsetend="168" sl="25" fileid="21" />
+                <BranchPoint vc="0" uspid="25" ordinal="1" path="1" offset="166" offsetend="199" sl="25" fileid="21" />
+              </BranchPoints>
+              <MethodPoint vc="0" uspid="0" p8:type="SequencePoint" ordinal="0" offset="0" sc="0" sl="22" ec="1" el="33" bec="0" bev="0" fileid="21" xmlns:p8="xsi" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="5" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" />
+          <FullName>LastRoom.Api.Controllers.BookingsController/&lt;Get&gt;d__3</FullName>
+          <Methods>
+            <Method cyclomaticComplexity="1" nPathComplexity="1" sequenceCoverage="0" branchCoverage="100" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="5" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken />
+              <Name>System.Void LastRoom.Api.Controllers.BookingsController/&lt;Get&gt;d__3::MoveNext()</Name>
+              <FileRef uid="21" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="37" ordinal="0" sl="37" sc="1" el="37" ec="2" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="0" uspid="38" ordinal="1" sl="38" sc="1" el="38" ec="2" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="0" uspid="40" ordinal="2" sl="40" sc="1" el="40" ec="2" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="0" uspid="42" ordinal="3" sl="42" sc="1" el="42" ec="2" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="0" uspid="43" ordinal="4" sl="43" sc="1" el="43" ec="2" bec="0" bev="0" fileid="21" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="0" uspid="0" p8:type="SequencePoint" ordinal="0" offset="0" sc="0" sl="37" ec="1" el="43" bec="0" bev="0" fileid="21" xmlns:p8="xsi" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="10" visitedSequencePoints="0" numBranchPoints="2" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="2" minCyclomaticComplexity="2" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" />
+          <FullName>LastRoom.Api.Controllers.BookingsController/&lt;Post&gt;d__4</FullName>
+          <Methods>
+            <Method cyclomaticComplexity="2" nPathComplexity="2" sequenceCoverage="0" branchCoverage="0" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="10" visitedSequencePoints="0" numBranchPoints="2" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="2" minCyclomaticComplexity="2" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken />
+              <Name>System.Void LastRoom.Api.Controllers.BookingsController/&lt;Post&gt;d__4::MoveNext()</Name>
+              <FileRef uid="21" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="47" ordinal="0" sl="47" sc="1" el="47" ec="2" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="0" uspid="48" ordinal="1" sl="48" sc="1" el="48" ec="2" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="0" uspid="49" ordinal="2" sl="49" sc="1" el="49" ec="2" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="0" uspid="50" ordinal="3" sl="50" sc="1" el="50" ec="2" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="0" uspid="51" ordinal="4" sl="51" sc="1" el="51" ec="2" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="0" uspid="52" ordinal="5" sl="52" sc="1" el="52" ec="2" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="0" uspid="54" ordinal="6" sl="54" sc="1" el="54" ec="2" bec="2" bev="0" fileid="21" />
+                <SequencePoint vc="0" uspid="56" ordinal="7" sl="56" sc="1" el="56" ec="2" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="0" uspid="58" ordinal="8" sl="58" sc="1" el="58" ec="2" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="0" uspid="59" ordinal="9" sl="59" sc="1" el="59" ec="2" bec="0" bev="0" fileid="21" />
+              </SequencePoints>
+              <BranchPoints>
+                <BranchPoint vc="0" uspid="54" ordinal="0" path="0" offset="204" offsetend="206" sl="54" fileid="21" />
+                <BranchPoint vc="0" uspid="54" ordinal="1" path="1" offset="204" offsetend="236" sl="54" fileid="21" />
+              </BranchPoints>
+              <MethodPoint vc="0" uspid="0" p8:type="SequencePoint" ordinal="0" offset="0" sc="0" sl="47" ec="1" el="59" bec="0" bev="0" fileid="21" xmlns:p8="xsi" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="7" visitedSequencePoints="0" numBranchPoints="2" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="2" minCyclomaticComplexity="2" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" />
+          <FullName>LastRoom.Api.Controllers.BookingsController/&lt;Put&gt;d__5</FullName>
+          <Methods>
+            <Method cyclomaticComplexity="2" nPathComplexity="2" sequenceCoverage="0" branchCoverage="0" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="7" visitedSequencePoints="0" numBranchPoints="2" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="2" minCyclomaticComplexity="2" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken />
+              <Name>System.Void LastRoom.Api.Controllers.BookingsController/&lt;Put&gt;d__5::MoveNext()</Name>
+              <FileRef uid="21" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="63" ordinal="0" sl="63" sc="1" el="63" ec="2" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="0" uspid="64" ordinal="1" sl="64" sc="1" el="64" ec="2" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="0" uspid="66" ordinal="2" sl="66" sc="1" el="66" ec="2" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="0" uspid="68" ordinal="3" sl="68" sc="1" el="68" ec="2" bec="2" bev="0" fileid="21" />
+                <SequencePoint vc="0" uspid="70" ordinal="4" sl="70" sc="1" el="70" ec="2" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="0" uspid="72" ordinal="5" sl="72" sc="1" el="72" ec="2" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="0" uspid="73" ordinal="6" sl="73" sc="1" el="73" ec="2" bec="0" bev="0" fileid="21" />
+              </SequencePoints>
+              <BranchPoints>
+                <BranchPoint vc="0" uspid="68" ordinal="0" path="0" offset="201" offsetend="203" sl="68" fileid="21" />
+                <BranchPoint vc="0" uspid="68" ordinal="1" path="1" offset="201" offsetend="233" sl="68" fileid="21" />
+              </BranchPoints>
+              <MethodPoint vc="0" uspid="0" p8:type="SequencePoint" ordinal="0" offset="0" sc="0" sl="63" ec="1" el="73" bec="0" bev="0" fileid="21" xmlns:p8="xsi" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="3" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" />
+          <FullName>LastRoom.Api.Controllers.ErrorController</FullName>
+          <Methods>
+            <Method cyclomaticComplexity="1" nPathComplexity="1" sequenceCoverage="0" branchCoverage="100" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="3" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken />
+              <Name>Microsoft.AspNetCore.Mvc.IActionResult LastRoom.Api.Controllers.ErrorController::Error()</Name>
+              <FileRef uid="22" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="11" ordinal="0" sl="11" sc="1" el="11" ec="2" bec="0" bev="0" fileid="22" />
+                <SequencePoint vc="0" uspid="12" ordinal="1" sl="12" sc="1" el="12" ec="2" bec="0" bev="0" fileid="22" />
+                <SequencePoint vc="0" uspid="13" ordinal="2" sl="13" sc="1" el="13" ec="2" bec="0" bev="0" fileid="22" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="0" uspid="0" p8:type="SequencePoint" ordinal="0" offset="0" sc="0" sl="11" ec="1" el="13" bec="0" bev="0" fileid="22" xmlns:p8="xsi" />
+            </Method>
+          </Methods>
+        </Class>
+      </Classes>
+    </Module>
+  </Modules>
+</CoverageSession>
