@@ -106,11 +106,15 @@ public class BookingService : IBookingService
         
         var reserved = Reserved(booking);
         if (reserved.IsFailed)
+        {
             return reserved;
+        }
         
         var validation = ValidateBooking(booking.CheckInDate, booking.CheckOutDate);
         if (validation.IsFailed)
+        {
             return validation;
+        }
 
         dbBooking.Client.FullName = booking.Client.FullName;
         dbBooking.Client.Identification = booking.Client.Identification;
@@ -127,7 +131,9 @@ public class BookingService : IBookingService
         var dbBooking = await GetABookingByTicketAsync(ticket);
 
         if (dbBooking is null)
+        {
             return Result.Fail(new BookingNotFoundError());
+        }
 
         _dbContext.Remove(dbBooking);
         await _dbContext.SaveChangesAsync();
@@ -191,7 +197,9 @@ public class BookingService : IBookingService
                       && x.Ticket != booking.Ticket);
         
         if (reserved)
+        {
             return Result.Fail(new RoomAlreadyBookedError());
+        }
 
         return Result.Ok();
     }

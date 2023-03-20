@@ -11,7 +11,9 @@ public class ApiController : ControllerBase
     protected ActionResult Problem(List<IError> errors)
     {
         if (errors.Count is 0)
+        {
             return Problem();
+        }
 
         var modelState = new ModelStateDictionary();
 

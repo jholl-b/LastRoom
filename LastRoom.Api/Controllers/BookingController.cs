@@ -22,7 +22,10 @@ public class BookingsController : ApiController
     {
         var result = await _bookingService.GetBookingAsync(ticket);
         
-        if (result.IsFailed) return Problem(result.Errors);
+        if (result.IsFailed)
+        {
+            return Problem(result.Errors);
+        }
         
         var response = MapBookingToBookingResponse(result.Value);
         
