@@ -22,7 +22,9 @@ public class BookingService : IBookingService
         var booking = await GetABookingByTicketAsync(ticket);
 
         if (booking is null)
+        {
             return Result.Fail(new BookingNotFoundError());
+        }
 
         return booking;
     }
@@ -65,11 +67,15 @@ public class BookingService : IBookingService
     {
         var reserved = Reserved(checkInDate, checkOutDate);
         if (reserved.IsFailed)
+        {
             return reserved;
+        }
 
         var validation = ValidateBooking(checkInDate, checkOutDate);
         if (validation.IsFailed)
+        {
             return validation;
+        }
 
         var booking = new Booking
         {
@@ -94,7 +100,9 @@ public class BookingService : IBookingService
         var dbBooking = await GetABookingByTicketAsync(ticket);
 
         if (dbBooking is null)
+        {
             return Result.Fail(new BookingNotFoundError());
+        }
         
         var reserved = Reserved(booking);
         if (reserved.IsFailed)
@@ -138,16 +146,24 @@ public class BookingService : IBookingService
     private Result ValidateBooking(DateOnly checkInDate, DateOnly checkOutDate)
     {
         if (checkOutDate.DayNumber - checkInDate.DayNumber < 0)
+        {
             return Result.Fail(new CheckOutBeforeCheckInError());
+        }
 
         if (checkOutDate.DayNumber - checkInDate.DayNumber >= 3)
+        {
             return Result.Fail(new StayPeriodTooLongError());
+        }
         
         if (checkInDate.DayNumber - _date.DateOnlyUtcNow.DayNumber > 30)
+        {
             return Result.Fail(new BookingDateTooFarError());
+        }
 
         if (checkInDate.DayNumber - _date.DateOnlyUtcNow.DayNumber < 1)
+        {
             return Result.Fail(new StartDateNotAllowedError());
+        }
 
         return Result.Ok();
     }
@@ -159,7 +175,9 @@ public class BookingService : IBookingService
             .Any(x => x.CheckInDate <= checkOutDate && checkInDate <= x.CheckOutDate );
 
         if (reserved)
+        {
             return Result.Fail(new RoomAlreadyBookedError());
+        }
 
         return Result.Ok();
     }
